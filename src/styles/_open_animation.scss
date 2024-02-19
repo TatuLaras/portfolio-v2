@@ -1,0 +1,183 @@
+$color-load: hsl(209, 25%, 80%);
+
+@keyframes open {
+    0% {
+        transform: scale(0);
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes openFlash {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes openBefore {
+    0% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes openHorizontal {
+    0% {
+        transform: scaleX(0.5) scaleY(0);
+        opacity: 0;
+    }
+
+    10% {
+        transform: scaleX(0.5) scaleY(1);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    80% {
+        transform: scaleX(0.5);
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+@keyframes openVertical {
+    0% {
+        transform: scaleX(0) scaleY(0.4);
+        opacity: 0;
+    }
+
+    20% {
+        transform: scaleX(1) scaleY(0.4);
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    80% {
+        transform: scaleY(0.4);
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.animate-open {
+    --delay: 0;
+    animation: open 0.15s ease-out backwards;
+    animation-delay: var(--delay);
+    &::before {
+        content: '';
+        pointer-events: none;
+        display: block;
+        background-color: #{$color-load};
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        animation: openBefore 0.35s linear;
+        animation-delay: var(--delay);
+        opacity: 0;
+    }
+    transform: scale(1);
+}
+
+.animate-open.horizontal {
+    animation: openHorizontal 0.4s ease-out backwards;
+    animation-delay: var(--delay);
+    &::before {
+        animation: openBefore 0.5s linear;
+        animation-delay: var(--delay);
+    }
+}
+
+.animate-open.vertical {
+    animation: openVertical 0.4s ease-out backwards;
+    animation-delay: var(--delay);
+    &::before {
+        animation: openBefore 0.5s linear;
+        animation-delay: var(--delay);
+    }
+}
+
+.animate-open.flash {
+    animation: openFlash 0.15s ease-out backwards;
+    animation-delay: var(--delay);
+    &::before {
+        animation: openBefore 0.35s linear;
+        animation-delay: var(--delay);
+    }
+}
+
+@keyframes jitter {
+    0% {
+        opacity: 1;
+    }
+
+    15% {
+        opacity: 0.4;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+.jitter {
+    animation: jitter 0.5s linear;
+    animation-delay: var(--delay);
+    opacity: 1;
+}

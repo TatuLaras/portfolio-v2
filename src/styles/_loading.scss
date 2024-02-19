@@ -1,0 +1,42 @@
+@use 'macros';
+
+.loading {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 100%, 0 100%);
+    border-left: 2px solid white;
+    padding: 0.4rem;
+    bottom: 0;
+    left: 0;
+    .text-above {
+        font-weight: 900;
+        font-size: 0.8rem;
+    }
+
+    .bar {
+        height: 0.4rem;
+        margin: 0.1rem 0;
+
+        width: 8rem;
+        background-color: var(--color-bg-2-dark);
+        @include macros.borderInset(2px);
+
+        &::before {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            transition: transform 0.1s ease-out;
+            transform: scaleX(var(--loaded));
+            @include macros.borderOutset(2px);
+            position: relative;
+            top: -2px;
+            left: -2px;
+            background-color: var(--color-bg-2);
+        }
+    }
+
+    .text-below {
+        font-size: 0.7rem;
+    }
+}

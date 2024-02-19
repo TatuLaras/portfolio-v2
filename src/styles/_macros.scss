@@ -1,0 +1,20 @@
+$color-light: white;
+$color-dark: hsl(217, 14%, 50%);
+@mixin borderOutsetTopBottom($width) {
+    border-top: #{$width} solid #{$color-light};
+    border-bottom: #{$width} solid #{$color-dark};
+}
+@mixin borderInsetTopBottom($width) {
+    border-bottom: #{$width} solid #{$color-light};
+    border-top: #{$width} solid #{$color-dark};
+}
+@mixin borderOutset($width) {
+    @include borderOutsetTopBottom(#{$width});
+    border-left: #{$width} solid #{$color-light};
+    border-right: #{$width} solid #{$color-dark};
+}
+@mixin borderInset($width) {
+    @include borderInsetTopBottom(#{$width});
+    border-right: #{$width} solid #{$color-light};
+    border-left: #{$width} solid #{$color-dark};
+}

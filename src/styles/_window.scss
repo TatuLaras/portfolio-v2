@@ -1,0 +1,158 @@
+@use 'macros';
+
+@keyframes hoverFlash {
+    0% {
+        background-color: #ffffff00;
+        filter: blur(0);
+    }
+    50% {
+        background-color: #ffffffff;
+        filter: blur(3px);
+    }
+    100% {
+        filter: blur(0);
+        background-color: #ffffff00;
+    }
+}
+.window {
+    margin: 1rem;
+    width: 30rem;
+    position: relative;
+    top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    border: 1px solid white;
+    user-select: none;
+    transition: transform 0.1s ease;
+    .menu {
+        display: flex;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 0 0.5rem;
+        background: linear-gradient(
+            90deg,
+            var(--color-bg-1) 0%,
+            var(--color-bg-1) 80%,
+            rgb(255, 255, 255) 100%
+        );
+        li {
+            font-weight: 700;
+            text-shadow: 1px 1px #333;
+            padding: 0.3rem;
+            .inner:not(.disabled):hover {
+                cursor: pointer;
+                animation: hoverFlash 0.2s ease-in-out;
+            }
+
+            .inner.disabled {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    nav {
+        padding: 0.2rem 0.5rem;
+        display: flex;
+        justify-content: stretch;
+        background-color: var(--color-bg-2);
+        color: black;
+        font-weight: 700;
+        text-shadow: none;
+        cursor: grab;
+        &:active {
+            cursor: grabbing;
+        }
+        @include macros.borderOutsetTopBottom(2px);
+
+        .dimple {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                width: 5rem;
+                height: 0;
+                @include macros.borderOutset(2px);
+                margin: 0.12rem;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    .body {
+        max-height: 33rem;
+        flex: 1;
+        overflow-y: auto;
+        z-index: 5;
+        background-color: rgba(0, 0, 0, 0.3);
+        user-select: text;
+
+        .profile,
+        .crimes {
+            padding: 1rem;
+            height: fit-content !important;
+            font-size: 1.1rem;
+            p {
+                margin: 1.2rem 0;
+            }
+
+            a {
+                color: white;
+                font-weight: 600;
+            }
+
+            img,
+            .video-embed {
+                width: 20rem;
+                margin: 1rem;
+                margin-right: 3rem;
+                margin-bottom: 2rem;
+                border-color: white;
+                border-style: solid;
+                border-width: 0 2px 1px 0;
+                float: left;
+                filter: saturate(0.2);
+                user-select: none;
+            }
+
+            .video-embed {
+                aspect-ratio: 16/9;
+                width: 90%;
+            }
+
+            .tech {
+                padding: 0.5rem 1rem;
+                border: 1px solid white;
+                border-width: 1px 0 1px 1px;
+                background: linear-gradient(
+                    270deg,
+                    rgba(76, 102, 126, 0) 0%,
+                    rgba(76, 102, 126, 0.7) 100%
+                );
+                font-weight: 600;
+            }
+        }
+        .face {
+            width: 20rem;
+            margin: 2rem;
+            padding: 0;
+            aspect-ratio: 1;
+            border-color: white;
+            border-style: solid;
+            background-image: url('/img/face.png');
+            background-size: cover;
+            opacity: 0.9;
+            image-rendering: pixelated;
+            float: left;
+            margin-right: 3rem;
+            margin-bottom: 2rem;
+            .barcode {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
