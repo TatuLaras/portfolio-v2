@@ -21,6 +21,8 @@ export default function Projects({
             className='projects blur-bg animate-open vertical'
             style={delay(delayValue)}
         >
+            <div className="border-bottom"></div>
+            <div className="border-right"></div>
             <div className='title'>PROJECTS</div>
             <div className='list'>
                 {projects.map((project, i) => {

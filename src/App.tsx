@@ -9,9 +9,12 @@ import Loading from './components/Loading';
 import { blip, blipInit } from './blip';
 import Consent from './components/Consent';
 import { useBlip } from './hooks';
+import DesktopIcon from './components/DesktopIcon';
 
 function App() {
-    const [tab, setTab] = useState<'PROFILE' | 'PROJECT'>('PROFILE');
+    const [tab, setTab] = useState<'PROFILE' | 'PROJECT' | 'CONTACT'>(
+        'PROFILE',
+    );
     const [selectedProject, setSelectedProject] = useState<TProject | null>(
         null,
     );
@@ -98,22 +101,27 @@ function App() {
                 </TextTypeAnimation>
             </div>
             <div className='side-by-side'>
-                <Projects
-                    delayValue={1}
-                    onProjectSelected={(project) => {
-                        setWindowKey((old) => old + 1);
-                        setSelectedProject(project);
-                        setTab('PROJECT');
-                    }}
-                />
+                <div>
+                    <Projects
+                        delayValue={1}
+                        onProjectSelected={(project) => {
+                            setWindowKey((old) => old + 1);
+                            setSelectedProject(project);
+                            setTab('PROJECT');
+                        }}
+                    />
+                    <DesktopIcon img='/img/floppy.png' delayValue={2.5}>
+                        Lataa CV
+                    </DesktopIcon>
+                </div>
                 <DetailsWindow
                     delayValue={0}
                     tab={tab}
                     selectedProject={selectedProject}
-                    onProfileClicked={() => {
+                    onClickTab={(tab) => {
                         setWindowKey((old) => old + 1);
                         setSelectedProject(null);
-                        setTab('PROFILE');
+                        setTab(tab);
                     }}
                     key={windowKey}
                 />

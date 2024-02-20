@@ -6,16 +6,17 @@ import { useState } from 'react';
 import { useBlip } from '../../hooks';
 import MenuItem from './MenuItem';
 import TabNav from './TabNav';
+import Contact from './Contact';
 
 export default function DetailsWindow({
     delayValue,
     tab,
-    onProfileClicked,
+    onClickTab,
     selectedProject,
 }: {
     delayValue: number;
-    tab: 'PROFILE' | 'PROJECT';
-    onProfileClicked: () => void;
+    tab: 'PROFILE' | 'PROJECT' | 'CONTACT';
+    onClickTab: (tab: 'PROFILE' | 'CONTACT') => void;
     selectedProject: TProject | null;
 }) {
     useBlip(delayValue);
@@ -62,16 +63,23 @@ export default function DetailsWindow({
             className='window blur-bg animate-open flash'
             style={combine(delay(delayValue), translateStyle)}
         >
+            <div className='border-bottom'></div>
+            <div className='border-right'></div>
             <div className='menu-wrapper animate-open' style={delay(val())}>
                 <ul className='menu'>
-                    <MenuItem onClick={onProfileClicked} delayValue={val()}>
+                    <MenuItem
+                        onClick={() => onClickTab('PROFILE')}
+                        delayValue={val()}
+                    >
                         PROFILE
                     </MenuItem>
                     <MenuItem
-                        onClick={onProfileClicked}
+                        onClick={() => onClickTab('CONTACT')}
                         delayValue={val()}
-                        disabled={true}
                     >
+                        CONTACT
+                    </MenuItem>
+                    <MenuItem delayValue={val()} disabled={true}>
                         PROJECT
                     </MenuItem>
                 </ul>
@@ -93,6 +101,7 @@ export default function DetailsWindow({
                                 selectedProject={selectedProject}
                             ></Crimes>
                         ),
+                        CONTACT: <Contact delayValue={val() + 0.2} />,
                     }[tab]
                 }
             </div>

@@ -20,7 +20,7 @@ export default function MenuItem({
         <li className='animate-open vertical' style={delay(delayValue)}>
             <span
                 className={`inner ${disabled ? 'disabled' : ''}`}
-                onClick={disabled ? () => {} : onClick}
+                onClick={onClick}
             >
                 {children}
             </span>

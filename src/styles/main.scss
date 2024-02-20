@@ -5,6 +5,7 @@
 @use 'projects';
 @use 'loading';
 @use 'consent';
+@use 'desktop_icon';
 
 @use 'macros';
 
@@ -14,13 +15,14 @@
 $color-bg-1: #4c667e;
 $color-bg-2: #b4bbc6;
 $color-bg-2-dark: #949aae;
-
+$color-wine: #af0708;
 :root {
     font-family: 'Orbitron', sans-serif;
     font-optical-sizing: auto;
     --color-bg-1: #{$color-bg-1};
     --color-bg-2: #{$color-bg-2};
     --color-bg-2-dark: #{$color-bg-2-dark};
+    --color-wine: #{$color-wine};
     --scrollbar-width: 23px;
     color: white;
     text-shadow: 2px 2px 2px #333;
@@ -101,8 +103,25 @@ body {
     );
     border-color: white;
     border-style: solid;
-    border-width: 1px 0 0 2px;
+    border-width: 0 0 0 3px;
     max-width: 50rem;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+            270deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgb(255, 255, 255) 100%
+        );
+    }
+
     h1 {
         font-size: 1.4rem;
         font-weight: 700;
@@ -110,7 +129,19 @@ body {
 }
 
 .basic-panel.right {
-    border-width: 0 2px 1px 0;
+    border-width: 0 2px 0 0;
+    position: relative;
+
+    &::after {
+        $height: 1px;
+        height: $height;
+        top: calc(100% - $height);
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgb(255, 255, 255) 100%
+        );
+    }
 }
 
 .really-small-text {
@@ -159,7 +190,7 @@ body {
     bottom: 30vh;
     width: 30rem;
     overflow: hidden;
-    z-index: 3;
+    z-index: 0;
     opacity: 0.1;
     font-weight: 900;
     pre {
@@ -224,7 +255,7 @@ body {
         width: 13rem !important;
         margin-right: 1rem !important;
     }
-
+    
     .profile,
     .crimes {
         img,
@@ -234,8 +265,23 @@ body {
         }
     }
 }
+@media screen and (max-width: 365px) {
+    .projects {
+        margin-left: 0.2rem;
+        margin-right: 0.3rem;
+        .list {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
 
+    :root {
+        --scrollbar-width: 16px;
+    }
+}
 .side-by-side {
+    padding-bottom: 4rem;
+    border: 1px solid red;
     display: flex;
     justify-content: stretch;
     align-items: flex-end;
@@ -252,4 +298,29 @@ body {
 
 b {
     font-weight: 800;
+}
+
+.border-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgb(255, 255, 255) 100%
+    );
+}
+.border-right {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 2px;
+    background: linear-gradient(
+        0,
+        rgba(255, 255, 255, 0) 0%,
+        rgb(255, 255, 255) 100%
+    );
 }

@@ -19,13 +19,13 @@ export default function Consent({
                 <img
                     src='/img/flags/gb.png'
                     alt='Toggle language'
-                    className={`lang-flag ${language === 'gb' ? 'active' : ''}`}
+                    className={`lang-flag ${language === 'gb' ? 'active' : ''} hover-shake`}
                     onClick={() => onSetLanguage('gb')}
                 />
                 <img
                     src='/img/flags/fi.png'
                     alt='Toggle language'
-                    className={`lang-flag ${language === 'fi' ? 'active' : ''}`}
+                    className={`lang-flag ${language === 'fi' ? 'active' : ''} hover-shake`}
                     onClick={() => onSetLanguage('fi')}
                 />
             </div>
