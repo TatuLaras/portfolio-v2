@@ -1,5 +1,5 @@
 $color-light: white;
-$color-dark: hsl(217, 14%, 15%);
+$color-dark: #21252c;
 @mixin borderOutsetVertical($width) {
     border-top: #{$width} solid #{$color-light};
     border-bottom: #{$width} solid #{$color-dark};

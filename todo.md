@@ -1,4 +1,4 @@
 - Mobiili
 - CV-täbi tai lataus
-- Contact info
 - Profiilikuva
+- fontti

@@ -28,6 +28,7 @@ export async function blips(durationSeconds: number) {
 }
 
 export function blip() {
+    return;
     if (!initialized) return;
     const min = 7040 / 4;
     const max = min * 2;

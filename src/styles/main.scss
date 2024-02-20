@@ -69,7 +69,7 @@ body {
 
 ::-webkit-scrollbar-button {
     @include macros.borderOutset(3px);
-    background: var(--color-bg-2);
+    background-color: var(--color-bg-2);
     background-image: url('/img/up_arrow.png');
     background-size: contain;
     height: var(--scrollbar-width);
@@ -79,12 +79,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-bg-2);
+    background-color: var(--color-bg-2);
+    background-image: url('/img/scrollbar-thumb.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     @include macros.borderOutset(3px);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: adjust-color($color: $color-bg-2, $lightness: 3%);
 }
 
 ::selection {
