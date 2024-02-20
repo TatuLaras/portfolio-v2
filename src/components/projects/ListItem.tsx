@@ -1,6 +1,7 @@
 import { delay, imgSrc } from '../../helpers';
 import { TProject } from '../../types';
 import { useBlip } from '../../hooks';
+import { useRef } from 'react';
 
 export default function ListItem({
     project,
@@ -11,6 +12,7 @@ export default function ListItem({
     onProjectSelected: (project: TProject) => void;
     delayValue: number;
 }) {
+    const imageRef = useRef<HTMLDivElement>(null);
     const imageDelay = 0.4;
 
     useBlip(delayValue);
@@ -19,7 +21,14 @@ export default function ListItem({
         <div
             className='item animate-open horizontal'
             style={delay(delayValue)}
-            onClick={() => onProjectSelected(project)}
+            onClick={() => {
+                onProjectSelected(project);
+
+                // // Click animation
+                // imageRef.current?.classList.remove('click-shake');
+                // void imageRef.current?.offsetWidth;
+                // imageRef.current?.classList.add('click-shake');
+            }}
         >
             <div
                 className='image-container animate-open'
@@ -27,6 +36,7 @@ export default function ListItem({
             >
                 <div
                     className='image hover-shake'
+                    ref={imageRef}
                     style={imgSrc(project.img)}
                 />
             </div>

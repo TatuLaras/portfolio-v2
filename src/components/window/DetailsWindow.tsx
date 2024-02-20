@@ -67,7 +67,11 @@ export default function DetailsWindow({
                     <MenuItem onClick={onProfileClicked} delayValue={val()}>
                         PROFILE
                     </MenuItem>
-                    <MenuItem onClick={onProfileClicked} delayValue={val()}>
+                    <MenuItem
+                        onClick={onProfileClicked}
+                        delayValue={val()}
+                        disabled={true}
+                    >
                         PROJECT
                     </MenuItem>
                 </ul>

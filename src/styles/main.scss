@@ -21,13 +21,13 @@ $color-bg-2-dark: #949aae;
     --color-bg-1: #{$color-bg-1};
     --color-bg-2: #{$color-bg-2};
     --color-bg-2-dark: #{$color-bg-2-dark};
+    --scrollbar-width: 23px;
     color: white;
     text-shadow: 2px 2px 2px #333;
 }
 
 body {
     overflow-x: hidden;
-    min-height: 100vh;
 }
 
 * {
@@ -55,25 +55,32 @@ body {
     animation: bgFlash 0.5s linear;
 }
 
-/* width */
 ::-webkit-scrollbar {
-    width: 15px;
+    width: var(--scrollbar-width);
     border: 1px solid black;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: var(--color-bg-2-dark);
-    @include macros.borderInset(2px);
+    @include macros.borderInset(3px);
 }
 
-/* Handle */
+::-webkit-scrollbar-button {
+    @include macros.borderOutset(3px);
+    background: var(--color-bg-2);
+    background-image: url('/img/up_arrow.png');
+    background-size: contain;
+    height: var(--scrollbar-width);
+    &:vertical:increment {
+        background-image: url('/img/down_arrow.png');
+    }
+}
+
 ::-webkit-scrollbar-thumb {
     background: var(--color-bg-2);
-    @include macros.borderOutset(2px);
+    @include macros.borderOutset(3px);
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: adjust-color($color: $color-bg-2, $lightness: 3%);
 }
@@ -176,8 +183,25 @@ body {
     }
 }
 
+@keyframes extraShake {
+    0% {
+        transform: translateX(0) translateY(0);
+        filter: blur(0) invert(0);
+    }
+    50% {
+        filter: blur(4px) invert(100%);
+    }
+    100% {
+        transform: translateX(-0.2rem) translateY(-0.2rem);
+        filter: blur(0) invert(0);
+    }
+}
+
 .hover-shake:hover {
     animation: shake 0.2s cubic-bezier(0, -1.32, 0.9, 2.07) forwards;
+}
+.hover-shake:active {
+    filter: blur(4px) invert(100%) !important;
 }
 
 @media screen and (max-width: 1300px) {

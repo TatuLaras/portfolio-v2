@@ -29,12 +29,12 @@ export async function blips(durationSeconds: number) {
 
 export function blip() {
     if (!initialized) return;
-    const min = 7040 / 2;
+    const min = 7040 / 4;
     const max = min * 2;
     // create Oscillator node
     const oscillator = audioCtx.createOscillator();
 
-    oscillator.type = 'sine';
+    oscillator.type = 'sawtooth';
     oscillator.frequency.setValueAtTime(
         Math.floor(Math.random() * (max - min + 1) + min),
         audioCtx.currentTime,
@@ -42,7 +42,7 @@ export function blip() {
 
     const volume = audioCtx.createGain();
     volume.connect(audioCtx.destination);
-    volume.gain.value = 0.05;
+    volume.gain.value = 0.025;
 
     oscillator.connect(volume);
     oscillator.start();

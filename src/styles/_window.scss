@@ -64,7 +64,7 @@
         &:active {
             cursor: grabbing;
         }
-        @include macros.borderOutsetTopBottom(2px);
+        @include macros.borderOutsetVertical(3px);
 
         .dimple {
             flex: 1;

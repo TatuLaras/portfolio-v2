@@ -19,7 +19,6 @@ function App() {
     const [consent, setConsent] = useState<boolean>(false);
     const [language, setLanguage] = useState<'fi' | 'gb'>('fi');
 
-
     useBlip(0);
     useBlip(1);
 
@@ -31,8 +30,8 @@ function App() {
                     blipInit();
                     setConsent(true);
                 }}
-                onToggleLanguage={() => {
-                    setLanguage((old) => (old === 'fi' ? 'gb' : 'fi'));
+                onSetLanguage={(language: 'gb' | 'fi') => {
+                    setLanguage(language);
                     blip();
                 }}
             />
@@ -113,6 +112,7 @@ function App() {
                     selectedProject={selectedProject}
                     onProfileClicked={() => {
                         setWindowKey((old) => old + 1);
+                        setSelectedProject(null);
                         setTab('PROFILE');
                     }}
                     key={windowKey}
