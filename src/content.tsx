@@ -224,7 +224,7 @@ export const projects: TProject[] = [
                 <img src='/img/portfolio/mym.png' />
                 <div className='tech'>
                     React, Vite, TypeScript, Node.js, Express, Websockets, REST
-                    API
+                    API, Sass
                 </div>
                 <p>
                     Merge your music taste with someone else's! Login with
@@ -255,7 +255,7 @@ export const projects: TProject[] = [
             <>
                 <img src='/img/portfolio/portfolio1.png' />
                 <div className='tech'>
-                    React, Vite, TypeScript, Github actions
+                    React, Vite, TypeScript, Sass, Github actions
                 </div>
                 <p>Tätä edeltävä portfolio. Tämä nykyinen on toteutettu samoilla teknologioilla.</p>
                 <p>
@@ -273,7 +273,7 @@ export const projects: TProject[] = [
         content: (
             <>
                 <img src='/img/portfolio/mm2.png' />
-                <div className='tech'>React, Vite, Redux, TypeScript, Node.js, Electron, REST API</div>
+                <div className='tech'>React, Vite, Redux, TypeScript, Node.js, Electron, REST API, Sass</div>
                 <p>
                     Kehitteillä oleva edistyneempi ja web-teknologioihin pohjautuva versio MediaManager-projektista. 
                 </p>
