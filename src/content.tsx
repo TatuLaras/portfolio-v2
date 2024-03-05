@@ -279,7 +279,7 @@ export const projects: TProject[] = [
                 </p>
                 <p>
                     <a
-                        href='https://github.com/TatuLaras/MediaManager'
+                        href='https://github.com/TatuLaras/MediaManager2-electron'
                         target='_blank'
                     >
                         MediaManager 2 GitHubissa
