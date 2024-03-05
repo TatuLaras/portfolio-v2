@@ -255,11 +255,11 @@ export const projects: TProject[] = [
             <>
                 <img src='/img/portfolio/portfolio1.png' />
                 <div className='tech'>
-                    React, Vite, TypeScript
+                    React, Vite, TypeScript, Github actions
                 </div>
                 <p>Tätä edeltävä portfolio.</p>
                 <p>
-                    <a href='http://www.laras.cc/' target='_blank'>
+                    <a href='https://tatularas.github.io/portfolio' target='_blank'>
                         Linkki portfolioon
                     </a>
                 </p>
