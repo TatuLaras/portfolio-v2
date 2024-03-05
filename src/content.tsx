@@ -272,7 +272,7 @@ export const projects: TProject[] = [
         ),
     },
     {
-        desc: '(work in progress) Electron-pohjainen mediahubi.',
+        desc: '(work in progress) Electron-pohjainen mediahubi',
         title: 'MediaManager 2',
         img: '/img/portfolio/icons/mm.jpg',
         content: (
