@@ -278,7 +278,7 @@ export const projects: TProject[] = [
         content: (
             <>
                 <img src='/img/portfolio/mm2.png' />
-                <div className='tech'>React, Vite, Redux, TypeScript, Node.js, Electron, REST API, Sass</div>
+                <div className='tech'>React, Vite, Redux, TypeScript, Node.js, Electron, Jest, REST API, Sass</div>
                 <p>
                     Kehitteillä oleva edistyneempi ja web-teknologioihin pohjautuva versio MediaManager-projektista. 
                 </p>
