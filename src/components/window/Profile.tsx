@@ -7,12 +7,12 @@ export default function Profile({ delayValue }: { delayValue: number }) {
 
     return (
         <>
-            <div
+            {/* <div
                 className='face basic-panel right animate-open'
                 style={delay(delayValue)}
             >
                 <div className='barcode'>lvgssig</div>
-            </div>
+            </div> */}
             <div className='jitter profile' style={delay(delayValue)}>
                 <p>
                     {/* <TextTypeAnimation

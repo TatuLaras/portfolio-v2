@@ -248,7 +248,48 @@ export const projects: TProject[] = [
         ),
     },
     {
-        desc: 'Cross-platform mediahubi',
+        desc: 'Vaporwave-teemainen portfolio',
+        title: 'Vanha portfolio',
+        img: '/img/portfolio/icons/portfolio1.png',
+        content: (
+            <>
+                <img src='/img/portfolio/portfolio1.png' />
+                <div className='tech'>
+                    React, Vite, TypeScript
+                </div>
+                <p>Tätä edeltävä portfolio.</p>
+                <p>
+                    <a href='http://www.laras.cc/' target='_blank'>
+                        Linkki portfolioon
+                    </a>
+                </p>
+            </>
+        ),
+    },
+    {
+        desc: '(work in progress) Electron-pohjainen mediahubi.',
+        title: 'MediaManager 2',
+        img: '/img/portfolio/icons/mm.jpg',
+        content: (
+            <>
+                <img src='/img/portfolio/mm2.png' />
+                <div className='tech'>React, Vite, Redux, TypeScript, Node.js, Electron, REST API</div>
+                <p>
+                    Kehitteillä oleva edistyneempi ja web-teknologioihin pohjautuva versio MediaManager-projektista. 
+                </p>
+                <p>
+                    <a
+                        href='https://github.com/TatuLaras/MediaManager'
+                        target='_blank'
+                    >
+                        MediaManager 2 GitHubissa
+                    </a>
+                </p>
+            </>
+        ),
+    },
+    {
+        desc: 'C++-pohjainen cross-platform mediahubi',
         title: 'MediaManager',
         img: '/img/portfolio/icons/mm.jpg',
         content: (
@@ -270,6 +311,7 @@ export const projects: TProject[] = [
             </>
         ),
     },
+
     {
         desc: 'Työkalu kielten opiskeluun',
         title: 'Submerge (web)',
@@ -335,32 +377,6 @@ export const projects: TProject[] = [
                     </a>
                     .
                 </p>
-                <ul>
-                    <li>
-                        <a
-                            href='https://tatularas.github.io/win98clone/'
-                            target='_blank'
-                        >
-                            Windows 98 -klooni
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href='https://tatularas.github.io/Sand-simulation-on-the-web/'
-                            target='_blank'
-                        >
-                            Hiekkasimulaatio
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href='https://github.com/TatuLaras/nes-platformer/tree/master'
-                            target='_blank'
-                        >
-                            NES-projekti
-                        </a>
-                    </li>
-                </ul>
             </>
         ),
     },

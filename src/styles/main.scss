@@ -12,12 +12,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap');
 
+@font-face {
+    font-family: Rift;
+    src: url('/font/The Rift.otf');
+}
 $color-bg-1: #4c667e;
 $color-bg-2: #b4bbc6;
 $color-bg-2-dark: #949aae;
 $color-wine: #af0708;
 :root {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rift', 'Orbitron', sans-serif;
     font-optical-sizing: auto;
     --color-bg-1: #{$color-bg-1};
     --color-bg-2: #{$color-bg-2};

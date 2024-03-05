@@ -59,6 +59,9 @@
                 }
             }
             .details {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
                 .title {
                     color: red;
                     font-weight: 900;

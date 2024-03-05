@@ -6,7 +6,7 @@ import { delay } from './helpers';
 import { useState } from 'react';
 import { TProject } from './types';
 import Loading from './components/Loading';
-import { blip, blipInit } from './blip';
+import { blipInit } from './blip';
 import Consent from './components/Consent';
 import { useBlip } from './hooks';
 import DesktopIcon from './components/DesktopIcon';
@@ -20,7 +20,6 @@ function App() {
     );
     const [windowKey, setWindowKey] = useState<number>(0);
     const [consent, setConsent] = useState<boolean>(false);
-    const [language, setLanguage] = useState<'fi' | 'gb'>('fi');
 
     useBlip(0);
     useBlip(1);
@@ -28,14 +27,9 @@ function App() {
     if (!consent)
         return (
             <Consent
-                language={language}
                 onConsent={() => {
                     blipInit();
                     setConsent(true);
-                }}
-                onSetLanguage={(language: 'gb' | 'fi') => {
-                    setLanguage(language);
-                    blip();
                 }}
             />
         );
@@ -110,7 +104,11 @@ function App() {
                             setTab('PROJECT');
                         }}
                     />
-                    <DesktopIcon img='/img/floppy.png' delayValue={2.5}>
+                    <DesktopIcon
+                        img='/img/floppy.png'
+                        delayValue={2.5}
+                        onClick={() => (window.location.href = '/cv.pdf')}
+                    >
                         Lataa CV
                     </DesktopIcon>
                 </div>

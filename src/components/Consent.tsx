@@ -1,11 +1,7 @@
 export default function Consent({
-    language,
     onConsent,
-    onSetLanguage,
 }: {
-    language: 'fi' | 'gb';
     onConsent: () => void;
-    onSetLanguage: (language: 'gb' | 'fi') => void;
 }) {
     return (
         <div id='consent'>
@@ -15,7 +11,7 @@ export default function Consent({
             <div className='agree hover-shake' onClick={onConsent}>
                 KIRJAUDU PORTAALIIN
             </div>
-            <div className='flags'>
+            {/* <div className='flags'>
                 <img
                     src='/img/flags/gb.png'
                     alt='Toggle language'
@@ -28,7 +24,7 @@ export default function Consent({
                     className={`lang-flag ${language === 'fi' ? 'active' : ''} hover-shake`}
                     onClick={() => onSetLanguage('fi')}
                 />
-            </div>
+            </div> */}
         </div>
     );
 }
