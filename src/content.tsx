@@ -244,6 +244,11 @@ export const projects: TProject[] = [
                         Merge Your Music
                     </a>
                 </p>
+                <p>
+                    <a href='https://github.com/TatuLaras/merge-your-music' target='_blank'>
+                        Projekti GitHubissa
+                    </a>
+                </p>
             </>
         ),
     },
