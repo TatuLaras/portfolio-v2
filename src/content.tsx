@@ -249,7 +249,7 @@ export const projects: TProject[] = [
     },
     {
         desc: 'Vaporwave-teemainen portfolio',
-        title: 'Vanha portfolio',
+        title: 'Edellinen portfolio',
         img: '/img/portfolio/icons/portfolio1.png',
         content: (
             <>
