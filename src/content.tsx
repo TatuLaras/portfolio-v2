@@ -257,7 +257,7 @@ export const projects: TProject[] = [
                 <div className='tech'>
                     React, Vite, TypeScript, Github actions
                 </div>
-                <p>Tätä edeltävä portfolio.</p>
+                <p>Tätä edeltävä portfolio. Tämä nykyinen on toteutettu samoilla teknologioilla.</p>
                 <p>
                     <a href='https://tatularas.github.io/portfolio' target='_blank'>
                         Linkki portfolioon
