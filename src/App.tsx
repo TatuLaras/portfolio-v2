@@ -3,7 +3,7 @@ import Projects from './components/projects/Projects';
 import TextTypeAnimation from './components/TextTypeAnimation';
 import { dummySourceCode } from './content';
 import { delay } from './helpers';
-import { CSSProperties, useEffect, useRef, useState } from 'react';
+import { CSSProperties, useEffect, useState } from 'react';
 import { Coords, Project } from './types';
 import Loading from './components/Loading';
 import Consent from './components/Consent';
