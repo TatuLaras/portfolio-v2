@@ -1,5 +1,5 @@
 import { delay, imgSrc } from '../../helpers';
-import { TProject } from '../../types';
+import { Project } from '../../types';
 import { useRef } from 'react';
 
 export default function ListItem({
@@ -7,8 +7,8 @@ export default function ListItem({
     onProjectSelected,
     delayValue, // Seconds
 }: {
-    project: TProject;
-    onProjectSelected: (project: TProject) => void;
+    project: Project;
+    onProjectSelected: (project: Project) => void;
     delayValue: number;
 }) {
     const imageRef = useRef<HTMLDivElement>(null);

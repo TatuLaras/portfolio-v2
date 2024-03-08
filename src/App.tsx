@@ -3,8 +3,8 @@ import Projects from './components/projects/Projects';
 import TextTypeAnimation from './components/TextTypeAnimation';
 import { dummySourceCode } from './content';
 import { delay } from './helpers';
-import { useRef, useState } from 'react';
-import { TProject } from './types';
+import { CSSProperties, useEffect, useRef, useState } from 'react';
+import { Coords, Project } from './types';
 import Loading from './components/Loading';
 import Consent from './components/Consent';
 import DesktopIcon from './components/DesktopIcon';
@@ -13,19 +13,47 @@ function App() {
     const [tab, setTab] = useState<'PROFILE' | 'PROJECT' | 'CONTACT'>(
         'PROFILE',
     );
-    const [selectedProject, setSelectedProject] = useState<TProject | null>(
+    const [selectedProject, setSelectedProject] = useState<Project | null>(
         null,
     );
     const [windowKey, setWindowKey] = useState<number>(0);
     const [consent, setConsent] = useState<boolean>(false);
-    const bgRef = useRef<HTMLDivElement | null>(null);
+    const [parallaxOffset, setParallaxOffset] = useState<Coords>({
+        x: 0,
+        y: 0,
+    });
+
+    useEffect(() => {
+        window.addEventListener('mousemove', mouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', mouseMove);
+        };
+    }, []);
+
+    function mouseMove(e: MouseEvent) {
+        const maxOffset = 10;
+        let offset: Coords = {
+            x: e.clientX / window.innerWidth,
+            y: e.clientY / window.innerHeight,
+        };
+        offset = {
+            x: maxOffset * offset.x * -1,
+            y: maxOffset * offset.y * -1,
+        };
+        setParallaxOffset(offset);
+    }
+
+    const bgStyle: CSSProperties = {
+        transform: `translateX(${parallaxOffset.x}px) translateY(${parallaxOffset.y}px)`,
+    };
 
     if (!consent) return <Consent onConsent={() => setConsent(true)} />;
 
     return (
         <>
             <div className='scanlines'></div>
-            <div id='bg' ref={bgRef}></div>
+            <div id='bg' style={bgStyle}></div>
             <div className='really-small-text jitter'>
                 <h1>Varoitus:</h1>
                 <p>

@@ -50,7 +50,7 @@ body {
 }
 
 #bg {
-    --zoom: -20px;
+    --zoom: -10px;
     position: fixed;
     top: var(--zoom);
     right: var(--zoom);
@@ -290,7 +290,6 @@ body {
 }
 .side-by-side {
     padding-bottom: 4rem;
-    border: 1px solid red;
     display: flex;
     justify-content: stretch;
     align-items: flex-end;
@@ -332,4 +331,13 @@ b {
         rgba(255, 255, 255, 0) 0%,
         rgb(255, 255, 255) 100%
     );
+}
+
+#parallax-wrapper {
+    --margin: 5px;
+    position: fixed;
+    top: var(--margin);
+    left: var(--margin);
+    right: var(--margin);
+    bottom: var(--margin);
 }

@@ -1,6 +1,6 @@
 import { projects } from '../../content';
 import { delay } from '../../helpers';
-import { TProject } from '../../types';
+import { Project } from '../../types';
 import ListItem from './ListItem';
 
 export default function Projects({
@@ -8,7 +8,7 @@ export default function Projects({
     onProjectSelected,
 }: {
     delayValue: number;
-    onProjectSelected: (project: TProject) => void;
+    onProjectSelected: (project: Project) => void;
 }) {
     const delayBefore = 0.3;
     const delayBetween = 0.2;

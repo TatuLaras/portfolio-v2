@@ -1,4 +1,4 @@
-import { TProject } from './types';
+import { Project } from './types';
 
 export const dummySourceCode = `
 #include "management.h"
@@ -214,7 +214,7 @@ uint64_t manag_read_msr(uint64_t msr_index)
 }
 `;
 
-export const projects: TProject[] = [
+export const projects: Project[] = [
     {
         desc: 'Kirjaudu Spotifyllä ja lähetä linkki kaverille!',
         title: 'Merge Your Music',

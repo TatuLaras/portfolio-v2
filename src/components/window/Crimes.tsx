@@ -1,7 +1,7 @@
-import { TProject } from '../../types';
+import { Project } from '../../types';
 
 type Props = {
-    selectedProject: TProject | null;
+    selectedProject: Project | null;
 };
 
 export default function Crimes({ selectedProject }: Props) {

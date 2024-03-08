@@ -1,7 +1,7 @@
 import { combine, delay } from '../../helpers';
 import Profile from './Profile';
 import Crimes from './Crimes';
-import { TProject } from '../../types';
+import { Project } from '../../types';
 import { useState } from 'react';
 import MenuItem from './MenuItem';
 import TabNav from './TabNav';
@@ -11,7 +11,7 @@ type Props = {
     delayValue: number;
     tab: 'PROFILE' | 'PROJECT' | 'CONTACT';
     onClickTab: (tab: 'PROFILE' | 'CONTACT') => void;
-    selectedProject: TProject | null;
+    selectedProject: Project | null;
 };
 
 export default function DetailsWindow({
