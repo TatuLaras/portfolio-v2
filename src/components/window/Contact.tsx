@@ -1,10 +1,4 @@
-import { useBlip } from '../../hooks';
-
-type Props = { delayValue?: number };
-
-export default function Contact({ delayValue = 0 }: Props) {
-    useBlip(delayValue);
-
+export default function Contact() {
     return (
         <div className='contact'>
             <p>Yhteystiedot yms:</p>

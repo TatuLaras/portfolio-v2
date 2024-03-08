@@ -1,10 +1,9 @@
 import { delay } from '../../helpers';
-import { useBlip } from '../../hooks';
 import TextTypeAnimation from '../TextTypeAnimation';
 
-export default function Profile({ delayValue }: { delayValue: number }) {
-    useBlip(delayValue);
+type Props = { delayValue: number };
 
+export default function Profile({ delayValue }: Props) {
     return (
         <>
             {/* <div

@@ -3,24 +3,23 @@ import Profile from './Profile';
 import Crimes from './Crimes';
 import { TProject } from '../../types';
 import { useState } from 'react';
-import { useBlip } from '../../hooks';
 import MenuItem from './MenuItem';
 import TabNav from './TabNav';
 import Contact from './Contact';
+
+type Props = {
+    delayValue: number;
+    tab: 'PROFILE' | 'PROJECT' | 'CONTACT';
+    onClickTab: (tab: 'PROFILE' | 'CONTACT') => void;
+    selectedProject: TProject | null;
+};
 
 export default function DetailsWindow({
     delayValue,
     tab,
     onClickTab,
     selectedProject,
-}: {
-    delayValue: number;
-    tab: 'PROFILE' | 'PROJECT' | 'CONTACT';
-    onClickTab: (tab: 'PROFILE' | 'CONTACT') => void;
-    selectedProject: TProject | null;
-}) {
-    useBlip(delayValue);
-
+}: Props) {
     const step = 0.15;
     let delayVal = delayValue + step;
     const val = () => (delayVal += step);
@@ -96,12 +95,9 @@ export default function DetailsWindow({
                     {
                         PROFILE: <Profile delayValue={val() + 0.2} />,
                         PROJECT: (
-                            <Crimes
-                                delayValue={val() + 0.2}
-                                selectedProject={selectedProject}
-                            ></Crimes>
+                            <Crimes selectedProject={selectedProject}></Crimes>
                         ),
-                        CONTACT: <Contact delayValue={val() + 0.2} />,
+                        CONTACT: <Contact />,
                     }[tab]
                 }
             </div>

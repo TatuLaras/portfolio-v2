@@ -50,11 +50,12 @@ body {
 }
 
 #bg {
+    --zoom: -20px;
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: var(--zoom);
+    right: var(--zoom);
+    bottom: var(--zoom);
+    left: var(--zoom);
     background-image: url('/img/aquarium2.jpg');
     background-size: cover;
     image-rendering: pixelated;
@@ -267,6 +268,10 @@ body {
             width: 100% !important;
             margin: 0 0 1rem 0 !important;
         }
+    }
+
+    .window .menu li {
+        padding: 0.3rem 0rem;
     }
 }
 @media screen and (max-width: 365px) {

@@ -1,15 +1,10 @@
-import { useBlip } from '../../hooks';
 import { TProject } from '../../types';
 
-export default function Crimes({
-    delayValue,
-    selectedProject,
-}: {
-    delayValue: number;
+type Props = {
     selectedProject: TProject | null;
-}) {
-    useBlip(delayValue);
+};
 
+export default function Crimes({ selectedProject }: Props) {
     if (!selectedProject) return null;
 
     return <div className='crimes'>{selectedProject.content}</div>;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { delay } from '../../helpers';
-import { useBlip } from '../../hooks';
 
 type Props = {
     children: JSX.Element | string;
@@ -13,9 +12,6 @@ export default function TabNav({
     delayValue = 0,
     onMouseDown = () => {},
 }: Props) {
-
-    useBlip(delayValue);
-    
     return (
         <nav
             className='animate-open'

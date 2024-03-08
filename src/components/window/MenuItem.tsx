@@ -1,5 +1,4 @@
 import { delay } from '../../helpers';
-import { useBlip } from '../../hooks';
 
 type Props = {
     children: JSX.Element | string;
@@ -14,8 +13,6 @@ export default function MenuItem({
     delayValue = 0,
     disabled = false,
 }: Props) {
-    useBlip(delayValue);
-
     return (
         <li className='animate-open vertical' style={delay(delayValue)}>
             <span

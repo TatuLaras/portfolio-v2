@@ -1,5 +1,4 @@
 import { delay, imgSrc } from '../helpers';
-import { useBlip } from '../hooks';
 
 type Props = {
     children: string;
@@ -14,8 +13,6 @@ export default function DesktopIcon({
     onClick = () => {},
     delayValue = 0,
 }: Props) {
-    
-    useBlip(delayValue);
     return (
         <div
             className='desktop-icon animate-open '

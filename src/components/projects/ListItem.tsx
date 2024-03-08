@@ -1,6 +1,5 @@
 import { delay, imgSrc } from '../../helpers';
 import { TProject } from '../../types';
-import { useBlip } from '../../hooks';
 import { useRef } from 'react';
 
 export default function ListItem({
@@ -14,8 +13,6 @@ export default function ListItem({
 }) {
     const imageRef = useRef<HTMLDivElement>(null);
     const imageDelay = 0.4;
-
-    useBlip(delayValue);
 
     return (
         <div

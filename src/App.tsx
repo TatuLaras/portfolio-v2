@@ -3,12 +3,10 @@ import Projects from './components/projects/Projects';
 import TextTypeAnimation from './components/TextTypeAnimation';
 import { dummySourceCode } from './content';
 import { delay } from './helpers';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { TProject } from './types';
 import Loading from './components/Loading';
-import { blipInit } from './blip';
 import Consent from './components/Consent';
-import { useBlip } from './hooks';
 import DesktopIcon from './components/DesktopIcon';
 
 function App() {
@@ -20,24 +18,14 @@ function App() {
     );
     const [windowKey, setWindowKey] = useState<number>(0);
     const [consent, setConsent] = useState<boolean>(false);
+    const bgRef = useRef<HTMLDivElement | null>(null);
 
-    useBlip(0);
-    useBlip(1);
-
-    if (!consent)
-        return (
-            <Consent
-                onConsent={() => {
-                    blipInit();
-                    setConsent(true);
-                }}
-            />
-        );
+    if (!consent) return <Consent onConsent={() => setConsent(true)} />;
 
     return (
         <>
             <div className='scanlines'></div>
-            <div id='bg'></div>
+            <div id='bg' ref={bgRef}></div>
             <div className='really-small-text jitter'>
                 <h1>Varoitus:</h1>
                 <p>
