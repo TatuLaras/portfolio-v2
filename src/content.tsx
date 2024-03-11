@@ -245,7 +245,10 @@ export const projects: Project[] = [
                     </a>
                 </p>
                 <p>
-                    <a href='https://github.com/TatuLaras/merge-your-music' target='_blank'>
+                    <a
+                        href='https://github.com/TatuLaras/merge-your-music'
+                        target='_blank'
+                    >
                         Projekti GitHubissa
                     </a>
                 </p>
@@ -262,9 +265,15 @@ export const projects: Project[] = [
                 <div className='tech'>
                     React, Vite, TypeScript, Sass, Github actions
                 </div>
-                <p>Tätä edeltävä portfolio. Tämä nykyinen on toteutettu samoilla teknologioilla.</p>
                 <p>
-                    <a href='https://tatularas.github.io/portfolio' target='_blank'>
+                    Tätä edeltävä portfolio. Tämä nykyinen on toteutettu
+                    samoilla teknologioilla.
+                </p>
+                <p>
+                    <a
+                        href='https://tatularas.github.io/portfolio'
+                        target='_blank'
+                    >
                         Linkki portfolioon
                     </a>
                 </p>
@@ -272,24 +281,67 @@ export const projects: Project[] = [
         ),
     },
     {
-        desc: '(work in progress) Electron-pohjainen mediahubi',
-        title: 'MediaManager 2',
-        img: '/img/portfolio/icons/mm.jpg',
+        desc: 'Electron-pohjainen kehittynyt mediahubi',
+        title: 'Cinema Spectrum',
+        img: '/img/portfolio/icons/mm2.jpg',
         content: (
             <>
                 <img src='/img/portfolio/mm2.png' />
-                <div className='tech'>React, Vite, Redux, TypeScript, Node.js, Electron, Jest, REST API, Sass</div>
+                <div className='tech'>
+                    React, Vite, Redux, TypeScript, Node.js, Electron, Jest,
+                    REST API, Sass
+                </div>
                 <p>
-                    Kehitteillä oleva edistyneempi ja web-teknologioihin pohjautuva versio MediaManager-projektista. 
+                    <b>Cinema Spectrum</b> on web-teknologioilla ja Electronilla
+                    toteutettu mediahubi / -keskus, joka tarjoaa paikallisten
+                    TV-ohjelmien ja elokuvien kirjastolle (skannatut DVD:t tms.)
+                    striimauspalvelun kaltaisen käyttöliittymän.
                 </p>
                 <p>
                     <a
                         href='https://github.com/TatuLaras/MediaManager2-electron'
                         target='_blank'
                     >
-                        MediaManager 2 GitHubissa
+                        Projekti GitHubissa
                     </a>
                 </p>
+                <p>
+                    Kyseinen ohjelma pyrkii erottumaan muista vastaavista
+                    ohjelmista fokuksen osalta. Toisin kuin esimerkiksi Kodi,
+                    Cinema Spectrum ei ole sääasema, musiikkisoitin tai
+                    valokuvien katseluohjelma, vaan keskittyy ydintehtäväänsä,
+                    joka on paikallisen elokuvien ja TV-ohjelmien kirjaston
+                    hallinta ja pyrkii tekemään sen mahdollisimman hyvin.
+                </p>
+                <p>
+                    Erilaisen fokuksen myötä käyttöliittymä on pystytty
+                    suunnittelemaan käyttötarkoitukseen sopivammaksi ja itse
+                    Kodi:n käytössä huomaamiani kipukohtia on huomioitu. Muun
+                    muassa seuraaviin asioihin on kiinnitetty / kiinnitetään huomiota:
+                </p>
+                <ul>
+                    <li>
+                        <b>Työpöytä ja TV: </b>Hyvän mediahubin ominaisuuksiin
+                        kuuluu hyvän TV-käyttöliittymän lisäksi se, että sitä on
+                        myös miellyttävää käyttää työpöytäsovelluksena hiiren
+                        kanssa. Cinema Spectrum tarjoaa kaksi erillistä tilaa
+                        TV:lle ja työpöydälle.
+                    </li>
+                    <li>
+                        <b>Automaattiskannauksen virheenkorjaus: </b>Aina
+                        mediahubi ei kykene löytämään elokuvan tai TV-sarjan
+                        tietoja oikein, johtuen esimerkiksi tiedoston huonosta
+                        nimeämisestä. Cinema Spectrumissa on erikseen
+                        tuntemattomat-osio, joka listaa suoraan manuaalista
+                        väliintuloa vaativat mediateokset.
+                    </li>
+                    <li>
+                        <b>Out of The Box -toimivuus: </b>Monille Kodi:n käyttäjälle
+                        tuttu konfiguraatiotiedostojen kahlaus on pyritty minimoimaan.
+                        Median katselun kannalta tärkeät asetukset näytetään suoraan käyttäjälle,
+                        esimerkiksi oman mediasoittimen asetus.
+                    </li>
+                </ul>
             </>
         ),
     },
