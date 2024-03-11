@@ -317,7 +317,8 @@ export const projects: Project[] = [
                     Erilaisen fokuksen myötä käyttöliittymä on pystytty
                     suunnittelemaan käyttötarkoitukseen sopivammaksi ja itse
                     Kodi:n käytössä huomaamiani kipukohtia on huomioitu. Muun
-                    muassa seuraaviin asioihin on kiinnitetty / kiinnitetään huomiota:
+                    muassa seuraaviin asioihin on kiinnitetty / kiinnitetään
+                    huomiota:
                 </p>
                 <ul>
                     <li>
@@ -336,10 +337,9 @@ export const projects: Project[] = [
                         väliintuloa vaativat mediateokset.
                     </li>
                     <li>
-                        <b>Out of The Box -toimivuus: </b>Monille Kodi:n käyttäjälle
-                        tuttu konfiguraatiotiedostojen kahlaus on pyritty minimoimaan.
-                        Median katselun kannalta tärkeät asetukset näytetään suoraan käyttäjälle,
-                        esimerkiksi oman mediasoittimen asetus.
+                        <b>Out of The Box -toimivuus: </b>Cinema Spectrum on
+                        suunniteltu toimimaan mahdollisimman hyvin ns.
+                        "sellaisenaan".
                     </li>
                 </ul>
             </>
