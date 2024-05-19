@@ -174,13 +174,13 @@
             }
         }
         .face {
-            width: 20rem;
+            width: 17rem;
             margin: 2rem;
             padding: 0;
             aspect-ratio: 1;
             border-color: white;
             border-style: solid;
-            background-image: url('/img/face.png');
+            background-image: url('/img/face2.png');
             background-size: cover;
             opacity: 0.9;
             image-rendering: pixelated;
@@ -189,6 +189,7 @@
             margin-bottom: 2rem;
             .barcode {
                 font-size: 2.5rem;
+                text-shadow: none;
             }
         }
     }
