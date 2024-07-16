@@ -221,60 +221,33 @@ export const projects: Project[] = [
         img: '/img/portfolio/icons/mym.png',
         content: (
             <>
-                <img src='/img/portfolio/mym.png' />
-                <div className='tech'>
+                <a href="http://mergeyourmusic.laras.cc/">
+                    <img src="/img/portfolio/mym.png" />
+                </a>
+                <div className="tech">
                     React, Vite, TypeScript, Node.js, Express, Websockets, REST
                     API, Sass
                 </div>
                 <p>
-                    Merge your music taste with someone else's! Login with
+                    "Merge your music taste with someone else's! Login with
                     Spotify and send a link to your friend to start generating
-                    playlists from music you both enjoy.
+                    playlists from music you both enjoy."
                 </p>
                 <p>
-                    Spotify:n API-avaimeni kohtalo on vielä käsitteillä,
-                    tarkoittaen että vain ennalta määritetyt "betatestaajat"
-                    pystyvät kirjautua applikaatioon. Tämä muuttuu mikäli
-                    Spotify hyväksyy hakemukseni, jonka käsittelyyn pitäisi
-                    kulua noin 1,5 kk. Mikäli haluat betatestaajaksi, laitathan
-                    minulle meiliä!
+                    Äppi on nyt Spotifyn siunaama eli sitä pääsee kuka tahansa
+                    kokeilemaan. Linkki löytyy alta!
                 </p>
                 <p>
-                    <a href='http://mergeyourmusic.laras.cc/' target='_blank'>
+                    <a href="http://mergeyourmusic.laras.cc/" target="_blank">
                         Merge Your Music
                     </a>
                 </p>
                 <p>
                     <a
-                        href='https://github.com/TatuLaras/merge-your-music'
-                        target='_blank'
+                        href="https://github.com/TatuLaras/merge-your-music"
+                        target="_blank"
                     >
                         Projekti GitHubissa
-                    </a>
-                </p>
-            </>
-        ),
-    },
-    {
-        desc: 'Vaporwave-teemainen portfolio',
-        title: 'Edellinen portfolio',
-        img: '/img/portfolio/icons/portfolio1.png',
-        content: (
-            <>
-                <img src='/img/portfolio/portfolio1.png' />
-                <div className='tech'>
-                    React, Vite, TypeScript, Sass, Github actions
-                </div>
-                <p>
-                    Tätä edeltävä portfolio. Tämä nykyinen on toteutettu
-                    samoilla teknologioilla.
-                </p>
-                <p>
-                    <a
-                        href='https://tatularas.github.io/portfolio'
-                        target='_blank'
-                    >
-                        Linkki portfolioon
                     </a>
                 </p>
             </>
@@ -286,24 +259,23 @@ export const projects: Project[] = [
         img: '/img/portfolio/icons/mm2.jpg',
         content: (
             <>
-                <img src='/img/portfolio/mm2.png' />
-                <div className='tech'>
+                <a href="https://cinemaspectrum.laras.cc/">
+                    <img src="/img/portfolio/mm2.png" />
+                </a>
+                <div className="tech">
                     React, Vite, Redux, TypeScript, Node.js, Electron, Jest,
                     REST API, Sass
                 </div>
+                <p>
+                    <a href="https://cinemaspectrum.laras.cc/" target="_blank">
+                        Projektin kotisiivu
+                    </a>
+                </p>
                 <p>
                     <b>Cinema Spectrum</b> on web-teknologioilla ja Electronilla
                     toteutettu mediahubi / -keskus, joka tarjoaa paikallisten
                     TV-ohjelmien ja elokuvien kirjastolle (skannatut DVD:t tms.)
                     striimauspalvelun kaltaisen käyttöliittymän.
-                </p>
-                <p>
-                    <a
-                        href='https://github.com/TatuLaras/MediaManager2-electron'
-                        target='_blank'
-                    >
-                        Projekti GitHubissa
-                    </a>
                 </p>
                 <p>
                     Kyseinen ohjelma pyrkii erottumaan muista vastaavista
@@ -336,12 +308,34 @@ export const projects: Project[] = [
                         tuntemattomat-osio, joka listaa suoraan manuaalista
                         väliintuloa vaativat mediateokset.
                     </li>
-                    <li>
-                        <b>Out of The Box -toimivuus: </b>Cinema Spectrum on
-                        suunniteltu toimimaan mahdollisimman hyvin ns.
-                        "sellaisenaan".
-                    </li>
                 </ul>
+            </>
+        ),
+    },
+    {
+        desc: 'Vaporwave-teemainen portfolio',
+        title: 'Edellinen portfolio',
+        img: '/img/portfolio/icons/portfolio1.png',
+        content: (
+            <>
+                <a href="https://tatularas.github.io/portfolio">
+                    <img src="/img/portfolio/portfolio1.png" />
+                </a>
+                <div className="tech">
+                    React, Vite, TypeScript, Sass, Github actions
+                </div>
+                <p>
+                    Tätä edeltävä portfolio. Tämä nykyinen on toteutettu
+                    samoilla teknologioilla.
+                </p>
+                <p>
+                    <a
+                        href="https://tatularas.github.io/portfolio"
+                        target="_blank"
+                    >
+                        Linkki portfolioon
+                    </a>
+                </p>
             </>
         ),
     },
@@ -351,16 +345,18 @@ export const projects: Project[] = [
         img: '/img/portfolio/icons/mm.jpg',
         content: (
             <>
-                <img src='/img/portfolio/mediamanager.png' />
-                <div className='tech'>C++, Dear ImGui, REST API</div>
+                <a href="https://github.com/TatuLaras/MediaManager">
+                    <img src="/img/portfolio/mediamanager.png" />
+                </a>
+                <div className="tech">C++, Dear ImGui, REST API</div>
                 <p>
                     A cross-platform entertainment hub for managing your local
                     collection of movies and TV shows.
                 </p>
                 <p>
                     <a
-                        href='https://github.com/TatuLaras/MediaManager'
-                        target='_blank'
+                        href="https://github.com/TatuLaras/MediaManager"
+                        target="_blank"
                     >
                         MediaManager GitHubissa
                     </a>
@@ -375,8 +371,10 @@ export const projects: Project[] = [
         img: '/img/portfolio/icons/submergeold.jpg',
         content: (
             <>
-                <img src='/img/portfolio/submergeold.jpg' />
-                <div className='tech'>
+                <a href="https://tatularas.github.io/submerge-landing/">
+                    <img src="/img/portfolio/submergeold.jpg" />
+                </a>
+                <div className="tech">
                     JavaScript, Node.js, Express, MySQL, EJS, REST API,
                     Bootstrap
                 </div>
@@ -403,8 +401,8 @@ export const projects: Project[] = [
                     uudempi työpöytäpohjainen offline-versio on tekeillä. Vanhan
                     etusivun löydät{' '}
                     <a
-                        href='https://tatularas.github.io/submerge-landing/'
-                        target='_blank'
+                        href="https://tatularas.github.io/submerge-landing/"
+                        target="_blank"
                     >
                         täältä
                     </a>
@@ -412,10 +410,10 @@ export const projects: Project[] = [
                 </p>
                 <p>Esittelyvideo:</p>
                 <iframe
-                    className='video-embed'
-                    src='https://www.youtube.com/embed/Ggv0v3yDv28'
-                    title='YouTube video player'
-                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                    className="video-embed"
+                    src="https://www.youtube.com/embed/Ggv0v3yDv28"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                 ></iframe>
             </>
@@ -429,7 +427,7 @@ export const projects: Project[] = [
             <>
                 <p>
                     Muut pienemmät projektit löydät{' '}
-                    <a href='https://github.com/TatuLaras/' target='_blank'>
+                    <a href="https://github.com/TatuLaras/" target="_blank">
                         GitHubistani
                     </a>
                     .
