@@ -91,13 +91,14 @@
 
         .project-nav-button {
             opacity: 0;
-            background: none;
+            // background: none;
+            background-color: lime;
             border: none;
             color: white;
             font-family: 'Rift';
             font-size: 1.1em;
             font-weight: 500;
-            padding: 0.4em;
+            padding: 0.8em;
             --hover-offset: 0.1em;
 
             &.prev {
