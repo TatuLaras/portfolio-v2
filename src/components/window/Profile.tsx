@@ -1,6 +1,5 @@
 import { description } from '../../content';
 import { delay } from '../../helpers';
-import TextTypeAnimation from '../TextTypeAnimation';
 
 type Props = { delayValue: number };
 

@@ -6,8 +6,9 @@ export const description = (
         <p>
             <TextTypeAnimation
                 timePerChar={3}
-                writeHeadLength={10}
+                writeHeadLength={5}
                 loop={false}
+                delay={1500}
             >
                 Olen pitkään kerryttänyt vahvaa tietoteknistä osaamista, osin
                 töissä noin puolisentoista vuoden ajan, mutta myös vapaa-ajalla
@@ -20,8 +21,9 @@ export const description = (
         <p>
             <TextTypeAnimation
                 timePerChar={3}
-                writeHeadLength={10}
+                writeHeadLength={5}
                 loop={false}
+                delay={2000}
             >
                 Koen omaavani hyvät kommunikaatiotaidot, joille on tullut
                 käyttöä töissä eri sidosryhmien tarpeita selvitettäessä, sekä
