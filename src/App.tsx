@@ -52,9 +52,9 @@ function App() {
 
     return (
         <>
-            <div className='scanlines'></div>
-            <div id='bg' style={bgStyle}></div>
-            <div className='really-small-text jitter'>
+            <div className="scanlines"></div>
+            <div id="bg" style={bgStyle}></div>
+            <div className="really-small-text jitter">
                 <h1>Varoitus:</h1>
                 <p>
                     Tätä ei kannata lukea. Tuhlaat aikaasi. Kyseessä on
@@ -67,9 +67,9 @@ function App() {
                     Alla oleva viivakoodi ei myöskään johda mihinkään, sitä ei
                     kannata yrittää skannata.
                 </p>
-                <div className='barcode'>lfmslpd</div>
+                <div className="barcode">lfmslpd</div>
             </div>
-            <div className='really-small-text jitter small-text-left'>
+            <div className="really-small-text jitter small-text-left">
                 <h1>Info:</h1>
                 <p>Tämä teksti ei merkitse mitään, tätä ei kannata lukea.</p>
                 <p>
@@ -82,7 +82,7 @@ function App() {
                     </TextTypeAnimation>
                 </p>
             </div>
-            <div className='dummy-source'>
+            <div className="dummy-source">
                 <pre>
                     <TextTypeAnimation loop={true}>
                         {dummySourceCode}
@@ -90,28 +90,25 @@ function App() {
                 </pre>
             </div>
             <Loading />
-            <div className='animate-open basic-panel blur-bg'>
-                <h1 className='jitter' style={delay(0)}>
+            <div className="animate-open basic-panel blur-bg">
+                <h1 className="jitter" style={delay(0)}>
                     <TextTypeAnimation timePerChar={10} delay={500}>
-                        Tatu Laras - Ohjelmistokehittäjä
+                        Tatu Laras
                     </TextTypeAnimation>
                 </h1>
             </div>
             <div
-                className='basic-panel blur-bg animate-open horizontal'
+                className="basic-panel blur-bg animate-open horizontal"
                 style={delay(0)}
             >
-                <TextTypeAnimation writeHeadLength={10}>
-                    Löytyy n. 6 vuotta kokemusta ohjelmoinnin saralta, joista
-                    noin puolisentoista on työkokemusta. Kokemusta on kertynyt
-                    enimmäkseen web-kehityksen piiristä, mutta mielenkiinto on
-                    johdattanut monenlaisille muillekin poluille, kuten
-                    esimerkiksi mobiilikehityksen, VR-kehityksen ja
-                    käyttöjärjestelmäkehityksen pariin.
+                <TextTypeAnimation writeHeadLength={10} delay={500}>
+                    Ohjelmistokehittäjä vahvalla teknisellä osaamisella,
+                    visuaalisella silmällä ja kommunikaatiotaidoilla
+                    varustettuna.
                 </TextTypeAnimation>
             </div>
-            <div className='side-by-side'>
-                <div>
+            <div className="side-by-side">
+                <div className="left">
                     <Projects
                         delayValue={1}
                         onProjectSelected={(project) => {
@@ -120,13 +117,16 @@ function App() {
                             setTab('PROJECT');
                         }}
                     />
-                    <DesktopIcon
-                        img='/img/floppy.png'
-                        delayValue={2.5}
-                        onClick={() => (window.location.href = '/cv.pdf')}
-                    >
-                        Lataa CV
-                    </DesktopIcon>
+
+                    <div className="icon-container">
+                        <DesktopIcon
+                            img="/img/floppy.png"
+                            delayValue={2.5}
+                            onClick={() => (window.location.href = '/cv.pdf')}
+                        >
+                            Lataa CV
+                        </DesktopIcon>
+                    </div>
                 </div>
                 <DetailsWindow
                     delayValue={0}

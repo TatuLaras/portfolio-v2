@@ -260,7 +260,7 @@ body {
         width: 13rem !important;
         margin-right: 1rem !important;
     }
-    
+
     .profile,
     .crimes {
         img,
@@ -298,6 +298,11 @@ body {
     & > * {
         flex: 1;
     }
+}
+
+.side-by-side .icon-container {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .blur-bg {
