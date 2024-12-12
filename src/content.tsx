@@ -241,13 +241,17 @@ export const projects: Project[] = [
         ),
     },
     {
-        desc: 'Pienempiä projekteja',
+        desc: '',
         title: 'Muut projektit',
         img: '/img/face.jpg',
         content: (
             <>
                 <p>
-                    Muut pienemmät projektit löydät{' '}
+                    Ohjelmointityön tuoksinnassa ei aina muistu päivittää
+                    uusimpia projekteja tänne portfolion puolelle. Myös
+                    projektit jotka ovat melko valmiita mutta eivät 100%
+                    julkaisuvalmiita jäävät myös ulkopuolelle. Kaikki projektini
+                    löydät{' '}
                     <a href="https://github.com/TatuLaras/" target="_blank">
                         GitHubistani
                     </a>
