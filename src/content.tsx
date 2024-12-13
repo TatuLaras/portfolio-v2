@@ -46,8 +46,8 @@ export const projects: Project[] = [
                     <img src="/img/portfolio/mym.png" />
                 </a>
                 <div className="tech">
-                    React, Vite, TypeScript, Node.js, Express, Websockets, REST
-                    API, Sass
+                    React, TypeScript, Node.js, Express, Websockets, REST API,
+                    Sass
                 </div>
                 <p>
                     "Merge your music taste with someone else's! Login with
@@ -84,8 +84,7 @@ export const projects: Project[] = [
                     <img src="/img/portfolio/mm2.png" />
                 </a>
                 <div className="tech">
-                    React, Vite, Redux, TypeScript, Node.js, Electron, Jest,
-                    REST API, Sass
+                    React, TypeScript, Node.js, Electron, Jest, Sass, Redux
                 </div>
                 <p>
                     <a href="https://cinemaspectrum.laras.cc/" target="_blank">
@@ -134,33 +133,6 @@ export const projects: Project[] = [
         ),
     },
     {
-        desc: 'Vaporwave-teemainen portfolio',
-        title: 'Edellinen portfolio',
-        img: '/img/portfolio/icons/portfolio1.png',
-        content: (
-            <>
-                <a href="https://tatularas.github.io/portfolio">
-                    <img src="/img/portfolio/portfolio1.png" />
-                </a>
-                <div className="tech">
-                    React, Vite, TypeScript, Sass, Github actions
-                </div>
-                <p>
-                    Tätä edeltävä portfolio. Tämä nykyinen on toteutettu
-                    samoilla teknologioilla.
-                </p>
-                <p>
-                    <a
-                        href="https://tatularas.github.io/portfolio"
-                        target="_blank"
-                    >
-                        Linkki portfolioon
-                    </a>
-                </p>
-            </>
-        ),
-    },
-    {
         desc: 'C++-pohjainen cross-platform mediahubi',
         title: 'MediaManager',
         img: '/img/portfolio/icons/mm.jpg',
@@ -169,7 +141,7 @@ export const projects: Project[] = [
                 <a href="https://github.com/TatuLaras/MediaManager">
                     <img src="/img/portfolio/mediamanager.png" />
                 </a>
-                <div className="tech">C++, Dear ImGui, REST API</div>
+                <div className="tech">C++, Dear ImGui</div>
                 <p>
                     A cross-platform entertainment hub for managing your local
                     collection of movies and TV shows.
@@ -241,7 +213,34 @@ export const projects: Project[] = [
         ),
     },
     {
-        desc: '',
+        desc: 'Vuosituhannen vaihteen tyyliin toteutettu portfolio',
+        title: 'Edellinen portfolio',
+        img: '/img/portfolio/icons/portfolio1.png',
+        content: (
+            <>
+                <a href="https://tatularas.github.io/portfolio">
+                    <img src="/img/portfolio/portfolio1.png" />
+                </a>
+                <div className="tech">
+                    React, TypeScript, Sass, Github actions
+                </div>
+                <p>
+                    Tätä edeltävä portfolio. Tämä nykyinen on toteutettu
+                    samoilla teknologioilla.
+                </p>
+                <p>
+                    <a
+                        href="https://tatularas.github.io/portfolio"
+                        target="_blank"
+                    >
+                        Linkki portfolioon
+                    </a>
+                </p>
+            </>
+        ),
+    },
+    {
+        desc: 'GitHub',
         title: 'Muut projektit',
         img: '/img/face.jpg',
         content: (
@@ -256,6 +255,11 @@ export const projects: Project[] = [
                         GitHubistani
                     </a>
                     .
+                </p>
+                <p>
+                    <a href="https://github.com/TatuLaras/musicbase">Täältä</a>{' '}
+                    löytyy esimerkiksi nykyinen työn alla oleva projektini,
+                    Reactilla ja Taurilla (Rust) toteutettu musiikkisovellus.
                 </p>
             </>
         ),
