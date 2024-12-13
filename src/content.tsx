@@ -74,65 +74,65 @@ export const projects: Project[] = [
             </>
         ),
     },
-    // {
-    //     desc: 'Electron-pohjainen kehittynyt mediahubi',
-    //     title: 'Cinema Spectrum',
-    //     img: '/img/portfolio/icons/mm2.jpg',
-    //     content: (
-    //         <>
-    //             <a href="https://cinemaspectrum.laras.cc/">
-    //                 <img src="/img/portfolio/mm2.png" />
-    //             </a>
-    //             <div className="tech">
-    //                 React, Vite, Redux, TypeScript, Node.js, Electron, Jest,
-    //                 REST API, Sass
-    //             </div>
-    //             <p>
-    //                 <a href="https://cinemaspectrum.laras.cc/" target="_blank">
-    //                     Projektin kotisiivu
-    //                 </a>
-    //             </p>
-    //             <p>
-    //                 <b>Cinema Spectrum</b> on web-teknologioilla ja Electronilla
-    //                 toteutettu mediahubi / -keskus, joka tarjoaa paikallisten
-    //                 TV-ohjelmien ja elokuvien kirjastolle (skannatut DVD:t tms.)
-    //                 striimauspalvelun kaltaisen käyttöliittymän.
-    //             </p>
-    //             <p>
-    //                 Kyseinen ohjelma pyrkii erottumaan muista vastaavista
-    //                 ohjelmista fokuksen osalta. Toisin kuin esimerkiksi Kodi,
-    //                 Cinema Spectrum ei ole sääasema, musiikkisoitin tai
-    //                 valokuvien katseluohjelma, vaan keskittyy ydintehtäväänsä,
-    //                 joka on paikallisen elokuvien ja TV-ohjelmien kirjaston
-    //                 hallinta ja pyrkii tekemään sen mahdollisimman hyvin.
-    //             </p>
-    //             <p>
-    //                 Erilaisen fokuksen myötä käyttöliittymä on pystytty
-    //                 suunnittelemaan käyttötarkoitukseen sopivammaksi ja itse
-    //                 Kodi:n käytössä huomaamiani kipukohtia on huomioitu. Muun
-    //                 muassa seuraaviin asioihin on kiinnitetty / kiinnitetään
-    //                 huomiota:
-    //             </p>
-    //             <ul>
-    //                 <li>
-    //                     <b>Työpöytä ja TV: </b>Hyvän mediahubin ominaisuuksiin
-    //                     kuuluu hyvän TV-käyttöliittymän lisäksi se, että sitä on
-    //                     myös miellyttävää käyttää työpöytäsovelluksena hiiren
-    //                     kanssa. Cinema Spectrum tarjoaa kaksi erillistä tilaa
-    //                     TV:lle ja työpöydälle.
-    //                 </li>
-    //                 <li>
-    //                     <b>Automaattiskannauksen virheenkorjaus: </b>Aina
-    //                     mediahubi ei kykene löytämään elokuvan tai TV-sarjan
-    //                     tietoja oikein, johtuen esimerkiksi tiedoston huonosta
-    //                     nimeämisestä. Cinema Spectrumissa on erikseen
-    //                     tuntemattomat-osio, joka listaa suoraan manuaalista
-    //                     väliintuloa vaativat mediateokset.
-    //                 </li>
-    //             </ul>
-    //         </>
-    //     ),
-    // },
+    {
+        desc: 'Electron-pohjainen mediahubi',
+        title: 'Cinema Spectrum',
+        img: '/img/portfolio/icons/mm2.jpg',
+        content: (
+            <>
+                <a href="https://cinemaspectrum.laras.cc/">
+                    <img src="/img/portfolio/mm2.png" />
+                </a>
+                <div className="tech">
+                    React, Vite, Redux, TypeScript, Node.js, Electron, Jest,
+                    REST API, Sass
+                </div>
+                <p>
+                    <a href="https://cinemaspectrum.laras.cc/" target="_blank">
+                        Projektin kotisiivu
+                    </a>
+                </p>
+                <p>
+                    <b>Cinema Spectrum</b> on web-teknologioilla ja Electronilla
+                    toteutettu mediahubi / -keskus, joka tarjoaa paikallisten
+                    TV-ohjelmien ja elokuvien kirjastolle (skannatut DVD:t tms.)
+                    striimauspalvelun kaltaisen käyttöliittymän.
+                </p>
+                <p>
+                    Kyseinen ohjelma pyrkii erottumaan muista vastaavista
+                    ohjelmista fokuksen osalta. Toisin kuin esimerkiksi Kodi,
+                    Cinema Spectrum ei ole sääasema, musiikkisoitin tai
+                    valokuvien katseluohjelma, vaan keskittyy ydintehtäväänsä,
+                    joka on paikallisen elokuvien ja TV-ohjelmien kirjaston
+                    hallinta ja pyrkii tekemään sen mahdollisimman hyvin.
+                </p>
+                <p>
+                    Erilaisen fokuksen myötä käyttöliittymä on pystytty
+                    suunnittelemaan käyttötarkoitukseen sopivammaksi ja itse
+                    Kodi:n käytössä huomaamiani kipukohtia on huomioitu. Muun
+                    muassa seuraaviin asioihin on kiinnitetty / kiinnitetään
+                    huomiota:
+                </p>
+                <ul>
+                    <li>
+                        <b>Työpöytä ja TV: </b>Hyvän mediahubin ominaisuuksiin
+                        kuuluu hyvän TV-käyttöliittymän lisäksi se, että sitä on
+                        myös miellyttävää käyttää työpöytäsovelluksena hiiren
+                        kanssa. Cinema Spectrum tarjoaa kaksi erillistä tilaa
+                        TV:lle ja työpöydälle.
+                    </li>
+                    <li>
+                        <b>Automaattiskannauksen virheenkorjaus: </b>Aina
+                        mediahubi ei kykene löytämään elokuvan tai TV-sarjan
+                        tietoja oikein, johtuen esimerkiksi tiedoston huonosta
+                        nimeämisestä. Cinema Spectrumissa on erikseen
+                        tuntemattomat-osio, joka listaa suoraan manuaalista
+                        väliintuloa vaativat mediateokset.
+                    </li>
+                </ul>
+            </>
+        ),
+    },
     {
         desc: 'Vaporwave-teemainen portfolio',
         title: 'Edellinen portfolio',
