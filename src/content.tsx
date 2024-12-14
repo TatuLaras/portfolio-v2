@@ -108,27 +108,8 @@ export const projects: Project[] = [
                 <p>
                     Erilaisen fokuksen myötä käyttöliittymä on pystytty
                     suunnittelemaan käyttötarkoitukseen sopivammaksi ja itse
-                    Kodi:n käytössä huomaamiani kipukohtia on huomioitu. Muun
-                    muassa seuraaviin asioihin on kiinnitetty / kiinnitetään
-                    huomiota:
+                    Kodi:n käytössä huomaamiani kipukohtia on huomioitu.
                 </p>
-                <ul>
-                    <li>
-                        <b>Työpöytä ja TV: </b>Hyvän mediahubin ominaisuuksiin
-                        kuuluu hyvän TV-käyttöliittymän lisäksi se, että sitä on
-                        myös miellyttävää käyttää työpöytäsovelluksena hiiren
-                        kanssa. Cinema Spectrum tarjoaa kaksi erillistä tilaa
-                        TV:lle ja työpöydälle.
-                    </li>
-                    <li>
-                        <b>Automaattiskannauksen virheenkorjaus: </b>Aina
-                        mediahubi ei kykene löytämään elokuvan tai TV-sarjan
-                        tietoja oikein, johtuen esimerkiksi tiedoston huonosta
-                        nimeämisestä. Cinema Spectrumissa on erikseen
-                        tuntemattomat-osio, joka listaa suoraan manuaalista
-                        väliintuloa vaativat mediateokset.
-                    </li>
-                </ul>
             </>
         ),
     },
