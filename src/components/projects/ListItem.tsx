@@ -16,7 +16,7 @@ export default function ListItem({
 
     return (
         <div
-            className='item animate-open horizontal'
+            className="item animate-open horizontal"
             style={delay(delayValue)}
             onClick={() => {
                 onProjectSelected(project);
@@ -28,18 +28,18 @@ export default function ListItem({
             }}
         >
             <div
-                className='image-container animate-open'
+                className="image-container animate-open"
                 style={delay(delayValue + imageDelay)}
             >
                 <div
-                    className='image hover-shake'
+                    className="image hover-shake"
                     ref={imageRef}
-                    style={imgSrc(project.img)}
+                    style={imgSrc(project.icon)}
                 />
             </div>
-            <div className='details'>
-                <div className='title'>{project.title.toUpperCase()}</div>
-                <div className='desc'>{project.desc}</div>
+            <div className="details">
+                <div className="title">{project.title.toUpperCase()}</div>
+                <div className="desc">{project.desc}</div>
             </div>
         </div>
     );

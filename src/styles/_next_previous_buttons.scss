@@ -1,0 +1,38 @@
+.next-previous-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    gap: 1em;
+
+    &.darkened button {
+        background: radial-gradient(rgba(0, 0, 0, 0.8), transparent);
+    }
+
+    button {
+        opacity: 0;
+        background: none;
+        border: none;
+        color: white;
+        font-family: 'Rift';
+        font-size: 1.1em;
+        font-weight: 500;
+        padding: 0.8em;
+        position: relative;
+        z-index: 10;
+        --hover-offset: 0.1em;
+
+        &:first-child {
+            --hover-offset: -0.1em;
+        }
+
+        &.enabled {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &.enabled:hover,
+        &.enabled:active {
+            animation: redFlash 0.2s linear;
+        }
+    }
+}

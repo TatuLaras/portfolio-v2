@@ -39,12 +39,15 @@ export const projects: Project[] = [
     {
         desc: 'Kirjaudu Spotifyllä ja lähetä linkki kaverille!',
         title: 'Merge Your Music',
-        img: '/img/portfolio/icons/mym.png',
+        icon: '/img/portfolio/icons/mym.png',
+        screenshots: [
+            '/img/portfolio/mergeyourmusic/1.png',
+            '/img/portfolio/mergeyourmusic/2.png',
+            '/img/portfolio/mergeyourmusic/3.png',
+            '/img/portfolio/mergeyourmusic/4.png',
+        ],
         content: (
             <>
-                <a href="http://mergeyourmusic.laras.cc/">
-                    <img src="/img/portfolio/mym.png" />
-                </a>
                 <div className="tech">
                     React, TypeScript, Node.js, Express, Websockets, REST API,
                     Sass
@@ -77,12 +80,14 @@ export const projects: Project[] = [
     {
         desc: 'Electron-pohjainen mediahubi',
         title: 'Cinema Spectrum',
-        img: '/img/portfolio/icons/mm2.jpg',
+        icon: '/img/portfolio/icons/mm2.jpg',
+        screenshots: [
+            '/img/portfolio/screenshot1.png',
+            '/img/portfolio/screenshot3.png',
+            '/img/portfolio/screenshot2.png',
+        ],
         content: (
             <>
-                <a href="https://cinemaspectrum.laras.cc/">
-                    <img src="/img/portfolio/mm2.png" />
-                </a>
                 <div className="tech">
                     React, TypeScript, Node.js, Electron, Jest, Sass, Redux
                 </div>
@@ -116,12 +121,10 @@ export const projects: Project[] = [
     {
         desc: 'C++-pohjainen cross-platform mediahubi',
         title: 'MediaManager',
-        img: '/img/portfolio/icons/mm.jpg',
+        icon: '/img/portfolio/icons/mm.jpg',
+        screenshots: ['/img/portfolio/mediamanager.png'],
         content: (
             <>
-                <a href="https://github.com/TatuLaras/MediaManager">
-                    <img src="/img/portfolio/mediamanager.png" />
-                </a>
                 <div className="tech">C++, Dear ImGui</div>
                 <p>
                     A cross-platform entertainment hub for managing your local
@@ -142,12 +145,10 @@ export const projects: Project[] = [
     {
         desc: 'Työkalu kielten opiskeluun',
         title: 'Submerge (web)',
-        img: '/img/portfolio/icons/submergeold.jpg',
+        icon: '/img/portfolio/icons/submergeold.jpg',
+        screenshots: ['/img/portfolio/submergeold.jpg'],
         content: (
             <>
-                <a href="https://tatularas.github.io/submerge-landing/">
-                    <img src="/img/portfolio/submergeold.jpg" />
-                </a>
                 <div className="tech">
                     JavaScript, Node.js, Express, MySQL, EJS, REST API,
                     Bootstrap
@@ -196,12 +197,10 @@ export const projects: Project[] = [
     {
         desc: 'Vuosituhannen vaihteen tyyliin toteutettu portfolio',
         title: 'Edellinen portfolio',
-        img: '/img/portfolio/icons/portfolio1.png',
+        icon: '/img/portfolio/icons/portfolio1.png',
+        screenshots: ['/img/portfolio/portfolio1.png'],
         content: (
             <>
-                <a href="https://tatularas.github.io/portfolio">
-                    <img src="/img/portfolio/portfolio1.png" />
-                </a>
                 <div className="tech">
                     React, TypeScript, Sass, Github actions
                 </div>
@@ -223,7 +222,8 @@ export const projects: Project[] = [
     {
         desc: 'GitHub',
         title: 'Muut projektit',
-        img: '/img/face.jpg',
+        icon: '/img/face.jpg',
+        screenshots: [],
         content: (
             <>
                 <p>

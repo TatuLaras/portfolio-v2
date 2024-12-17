@@ -6,6 +6,8 @@
 @use 'loading';
 @use 'consent';
 @use 'desktop_icon';
+@use 'screenshots';
+@use 'next_previous_buttons';
 
 @use 'macros';
 
@@ -240,7 +242,7 @@ body {
     filter: blur(4px) invert(100%) !important;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1530px) {
     .side-by-side {
         width: 100% !important;
     }

@@ -3,6 +3,7 @@ import { projects } from '../../content';
 import { delay } from '../../helpers';
 import { Project } from '../../types';
 import ListItem from './ListItem';
+import NextPreviousButtons from '../NextPreviousButtons';
 
 export default function Projects({
     delayValue,
@@ -57,20 +58,14 @@ export default function Projects({
                     );
                 })}
             </div>
-            <nav>
-                <button
-                    onClick={previous}
-                    className={`${offset > 0 ? 'enabled' : ''} project-nav-button prev`}
-                >
-                    &lt;&lt;
-                </button>
-                <button
-                    onClick={next}
-                    className={`${offset + pageSize < projects.length ? 'enabled' : ''} project-nav-button`}
-                >
-                    &gt;&gt;
-                </button>
-            </nav>
+
+            <NextPreviousButtons
+                onPrevious={previous}
+                onNext={next}
+                disableNext={offset > 0}
+                disablePrevious={offset + pageSize < projects.length}
+            />
+
             <div className="really-small-text jitter" style={delay(baseDelay)}>
                 <h1>Varoitus:</h1>
                 <p>

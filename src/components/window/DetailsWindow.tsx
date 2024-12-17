@@ -1,11 +1,12 @@
 import { combine, delay } from '../../helpers';
 import Profile from './Profile';
-import Crimes from './Crimes';
+import ProjectDetails from './ProjectDetails';
 import { Project } from '../../types';
 import { useState } from 'react';
 import MenuItem from './MenuItem';
 import TabNav from './TabNav';
 import Contact from './Contact';
+import Screenshots from './Screenshots';
 
 type Props = {
     delayValue: number;
@@ -20,6 +21,9 @@ export default function DetailsWindow({
     onClickTab,
     selectedProject,
 }: Props) {
+    const [screenshotsOpen, setScreenshotsOpen] = useState(false);
+    const [screenshots, setScreenshots] = useState<string[]>([]);
+
     const step = 0.15;
     let delayVal = delayValue + step;
     const val = () => (delayVal += step);
@@ -58,49 +62,68 @@ export default function DetailsWindow({
     window.onmousemove = updateDrag;
 
     return (
-        <div
-            className='window blur-bg animate-open flash'
-            style={combine(delay(delayValue), translateStyle)}
-        >
-            <div className='border-bottom'></div>
-            <div className='border-right'></div>
-            <div className='menu-wrapper animate-open' style={delay(val())}>
-                <ul className='menu'>
-                    <MenuItem
-                        onClick={() => onClickTab('PROFILE')}
-                        delayValue={val()}
-                    >
-                        PROFILE
-                    </MenuItem>
-                    <MenuItem
-                        onClick={() => onClickTab('CONTACT')}
-                        delayValue={val()}
-                    >
-                        CONTACT
-                    </MenuItem>
-                    <MenuItem delayValue={val()} disabled={true}>
-                        PROJECT
-                    </MenuItem>
-                </ul>
-            </div>
+        <>
+            <Screenshots
+                screenshots={screenshots}
+                open={screenshotsOpen}
+                onClose={() => {
+                    setScreenshotsOpen(false);
+                }}
+            />
 
-            <TabNav onMouseDown={startDrag} delayValue={val()}>
-                {tab +
-                    (selectedProject
-                        ? ' > ' + selectedProject.title.toUpperCase()
-                        : '')}
-            </TabNav>
-            <div className='body animate-open horizontal' style={delay(val())}>
-                {
+            <div
+                className="window blur-bg animate-open flash"
+                style={combine(delay(delayValue), translateStyle)}
+            >
+                <div className="border-bottom"></div>
+                <div className="border-right"></div>
+                <div className="menu-wrapper animate-open" style={delay(val())}>
+                    <ul className="menu">
+                        <MenuItem
+                            onClick={() => onClickTab('PROFILE')}
+                            delayValue={val()}
+                        >
+                            PROFILE
+                        </MenuItem>
+                        <MenuItem
+                            onClick={() => onClickTab('CONTACT')}
+                            delayValue={val()}
+                        >
+                            CONTACT
+                        </MenuItem>
+                        <MenuItem delayValue={val()} disabled={true}>
+                            PROJECT
+                        </MenuItem>
+                    </ul>
+                </div>
+
+                <TabNav onMouseDown={startDrag} delayValue={val()}>
+                    {tab +
+                        (selectedProject
+                            ? ' > ' + selectedProject.title.toUpperCase()
+                            : '')}
+                </TabNav>
+                <div
+                    className="body animate-open horizontal"
+                    style={delay(val())}
+                >
                     {
-                        PROFILE: <Profile delayValue={val() + 0.2} />,
-                        PROJECT: (
-                            <Crimes selectedProject={selectedProject}></Crimes>
-                        ),
-                        CONTACT: <Contact />,
-                    }[tab]
-                }
+                        {
+                            PROFILE: <Profile delayValue={val() + 0.2} />,
+                            PROJECT: (
+                                <ProjectDetails
+                                    selectedProject={selectedProject}
+                                    onOpenScreenshots={(screenshots) => {
+                                        setScreenshots(screenshots);
+                                        setScreenshotsOpen(true);
+                                    }}
+                                ></ProjectDetails>
+                            ),
+                            CONTACT: <Contact />,
+                        }[tab]
+                    }
+                </div>
             </div>
-        </div>
+        </>
     );
 }
