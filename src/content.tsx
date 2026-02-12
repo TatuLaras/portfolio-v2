@@ -37,6 +37,57 @@ export const description = (
 
 export const projects: Project[] = [
     {
+        desc: 'Laajennettava modulaarinen syntetisaattori',
+        title: 'Waveforest',
+        icon: '/img/portfolio/icons/waveforest.jpg',
+        screenshots: [
+            '/img/portfolio/waveforest/1.png',
+            '/img/portfolio/waveforest/2.png',
+        ],
+        content: (
+            <>
+                <div className="tech">C, JACK audio kit, LV2, Raylib, Clay</div>
+                <p>
+                    <a href="https://github.com/TatuLaras/waveforest">
+                        Projekti GitHubissa.
+                    </a>
+                </p>
+                <p>
+                    Mikäli haluaa tehdä musiikkia Linux-ympäristössä, käytössäsi
+                    on laaja valikoima erittäin laadukkaita avoimen lähdekoodin
+                    ohjelmistoja ja plugineita erinäisiin audio-tarpeisiin.
+                    Kuitenkin FM-synteesin osa-alueella koin olemassa olevat
+                    vaihtoehdot hieman rajoittaviksi, joten ryhdyin tuumasta
+                    toimeen ja aloin pohtia että minkälainen olisi täydellinen
+                    FM-syntikka. Tajusin, että monissa ohjelmistoissa
+                    käytännöksi vakiintunut ns. node-editori sopisi
+                    täydellisesti mallintamaan tilannetta, jossa halutaan pystyä
+                    yhdistämään mitä tahansa, mihin tahansa. Itseasiassa, tämän
+                    tyyppinen käyttöliittymä olisi omiaan myös muunlaisille
+                    äänen syntetisoinnin muodoille.
+                </p>
+                <p>
+                    Siispä päädyin hieman monimutkaista reittiä pitkin
+                    lopputulokseen, että haluan tehdä modulaarisen syntikan.
+                    Tämä syntikka kuitenkin eroaa muista vastaavista syntikoista
+                    kuten VCV rackistä tai Cardinalista siten, että se ei pyri
+                    mallintamaan oikean maailman modulaarisyntetisoinnin
+                    laitteistoa moduuleineen ja johtoineen, vaan pelkäämättä
+                    hyödyntää digitaalista ulottuvuutta ja sen tuomia
+                    käytettävyysetuja.
+                </p>
+                <p>
+                    Kehityksessä pääpaino oli siinä, että saisi tehtyä
+                    syntikasta alustan, jota on helppo laajentaa. Jokainen node
+                    toteutetaan ns. pluginina, jonka ohjelma lataa
+                    käynnistyessään. Toimintalogiikka on samankaltainen
+                    esimerkiksi digitaaliaudioohjelmistojen efektipluginien
+                    kanssa, mutta pelkistetympi.
+                </p>
+            </>
+        ),
+    },
+    {
         desc: 'Kirjaudu Spotifyllä ja lähetä linkki kaverille!',
         title: 'Merge Your Music',
         icon: '/img/portfolio/icons/mym.png',

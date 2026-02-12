@@ -97,16 +97,6 @@ function App() {
                     </TextTypeAnimation>
                 </h1>
             </div>
-            <div
-                className="basic-panel blur-bg animate-open horizontal"
-                style={delay(0)}
-            >
-                <TextTypeAnimation writeHeadLength={10} delay={500}>
-                    Ohjelmistokehittäjä vahvalla teknisellä osaamisella,
-                    visuaalisella silmällä ja kommunikaatiotaidoilla
-                    varustettuna.
-                </TextTypeAnimation>
-            </div>
             <div className="side-by-side">
                 <div className="left">
                     <Projects
