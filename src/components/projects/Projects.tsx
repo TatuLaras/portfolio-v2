@@ -62,8 +62,8 @@ export default function Projects({
             <NextPreviousButtons
                 onPrevious={previous}
                 onNext={next}
-                disableNext={offset > 0}
-                disablePrevious={offset + pageSize < projects.length}
+                disableNext={offset + pageSize >= projects.length}
+                disablePrevious={offset == 0}
             />
 
             <div className="really-small-text jitter" style={delay(baseDelay)}>

@@ -37,6 +37,55 @@ export const description = (
 
 export const projects: Project[] = [
     {
+        desc: 'Visuaalisen luovan ohjelmoinnin alusta',
+        title: 'Muscini',
+        icon: '/img/portfolio/icons/muscini.jpg',
+        screenshots: ['/img/portfolio/muscini.gif'],
+        content: (
+            <>
+                <div className="tech">C, JACK audio kit, Raylib, GLSL</div>
+                <p>
+                    <a href="https://github.com/TatuLaras/muscini">
+                        Projekti GitHubissa.
+                    </a>
+                </p>
+                <p>
+                    Vuosituhannen vaihteen aikaiset{' '}
+                    <a href="https://fi.wikipedia.org/wiki/Demoskene">
+                        demoscene
+                    </a>
+                    -tuotokset ovat pitkään kiehtoneet meikäläistä siistin
+                    estetiikansa lisäksi myös sen suhteen, että kyseessä on
+                    taiteenlaji jossa taidetta tuotetaan pitkälti visuaalisen,
+                    luovan ohjelmoinnin kautta. Halusin dipata varpaitani tähän
+                    luovan ohjelmoinnin maailmaan ja idea syntyi työkalusta,
+                    joka tarjoaisi mahdollisimman kitkattomat lähtökohdat
+                    tälläiseen luovaan flow:hun.
+                </p>
+                <p>
+                    Muscini on siis alusta, joka hoitaa puolestasi kaiken muun
+                    paitsi varsinaisen luovan työn. Hot reload -arkkitehtuuri
+                    tarjoaa mahdollisuuden kirjoittaa C-kielistä
+                    visualisaatio-ohjelmaasi kuin dynaamisella
+                    skriptauskielellä, koskaan tajunnanvirtaa pysäyttämättä.
+                    Muscini vastaanottaa ääntä joko työpöydälläsi pyörivästä
+                    musiikkisoittimesta tai latenssittomasta lähteestä käyttäen
+                    JACK audio kit -rajapintaa. Ääntä analysoidaan, poimien
+                    sieltä signaalin taajuus- ja rytmisisällön joita voit
+                    käyttää visualisaatiotasi ohjelmoidessa. Rytmitietoa voi
+                    myös syöttää MIDI:n kautta, mahdollistaen Muscinin
+                    integraation osaksi musiikillista audio-visuaalista
+                    workflowta.
+                </p>
+                <p>
+                    Käyttötarkoitus Muscinissa on siis pääosin se, että voit
+                    laittaa mieleistäsi happoteknoa tai muuta musiikkia soimaan
+                    ja antaa vain tajunnan virrata.
+                </p>
+            </>
+        ),
+    },
+    {
         desc: 'Laajennettava modulaarinen syntetisaattori',
         title: 'Waveforest',
         icon: '/img/portfolio/icons/waveforest.jpg',
@@ -83,6 +132,113 @@ export const projects: Project[] = [
                     käynnistyessään. Toimintalogiikka on samankaltainen
                     esimerkiksi digitaaliaudioohjelmistojen efektipluginien
                     kanssa, mutta pelkistetympi.
+                </p>
+            </>
+        ),
+    },
+    {
+        desc: 'Hot reload -kirjasto',
+        title: 'Firewatch',
+        icon: '/img/portfolio/icons/firewatch.jpg',
+        screenshots: [],
+        content: (
+            <>
+                <p>
+                    <a href="https://github.com/TatuLaras/firewatch">
+                        Projekti GitHubissa.
+                    </a>
+                </p>
+                <p>
+                    Olen huomannut, että hot reloading -ominaisuuksilla voi olla
+                    luovissa jutuissa erittäin suuri positiivinen vaikutus. Sen
+                    sijaan, että flow katkeaisi tasaisin väliajoin esimerkiksi
+                    tiedostoja paikasta toiseen exportatessa, ohjelmat voisivat
+                    toimia siten, että jos jotain muutetaan jossain niin muutos
+                    pätee samantien kaikkialla muuallakin. Täten koko
+                    tietokoneesta tulee vain yksi luova kenttä jossa temmeltää
+                    murheetta.
+                </p>
+                <p>
+                    Tätä ei tietenkään ole järkevää soveltaa joka paikkaan,
+                    mutta monissa projekteissani, kuten Muscinissa tai Noblessa,
+                    hot reloading -ominaisuuksille on tarvetta. Tämän takia tein
+                    kirjaston, jonka ansiosta tälläisten ominaisuuksien
+                    lisääminen toimii "miksi ei" -periaatteella. Single header
+                    -kirjastona tämän projektin laajuus ei ole kovinkaan suuri,
+                    mutta projekteistani tämä on se, josta on ollut minulle
+                    itselleni ylivoimaisesti eniten hyötyä, varsinkin suhteessa
+                    siihen kuinka vähän aikaa tämän kehittämiseen meni.
+                </p>
+            </>
+        ),
+    },
+    {
+        desc: 'Scene-editori vanhantyyliseen pelinkehitykseen',
+        title: 'Noble',
+        icon: '/img/portfolio/icons/noble.jpg',
+        screenshots: [
+            '/img/portfolio/noble/1.png',
+            '/img/portfolio/noble/2.png',
+            '/img/portfolio/noble/3.png',
+            '/img/portfolio/noble/4.png',
+        ],
+        content: (
+            <>
+                <div className="tech">C, Raylib</div>
+                <p>
+                    <a href="https://github.com/TatuLaras/noble">
+                        Projekti GitHubissa.
+                    </a>
+                </p>
+                <p>
+                    Jokusen aikaa sitten näin YouTubesta Eskil Steenbergin
+                    videon{' '}
+                    <a href="https://www.youtube.com/watch?v=443UNeGrFoM">
+                        "How I Program C"
+                    </a>
+                    , jossa hän selittää omintakeista lähestymistapaansa
+                    pelinkehitykseen. Pelimoottorin sijaan kehitys pohjautuu
+                    pitkälti hänen itsensä tarpeisiin räätälöityihin omiin
+                    työkaluihin. Tästä inspiroituneena idea lähtikin laukalle,
+                    haaveena kehittää oma ensimmäisen persoonan fantasiapeli,
+                    graafisena tyylinään 90-luvun ja vuosituhannen vaihteen
+                    tyylinen vanhahtava 3D-grafiikka. Aloitin projektin
+                    yksinkertaisella 3D-mallintarkasteluohjelmalla, joka hot
+                    reloadingin avulla mahdollisti mallien teksturoinnin
+                    käyttäen ulkoista pikseligrafiikkapiirto-ohjelmaa. Tämän
+                    jälkeen tarvetta oli ohjelmalle, jonka avulla voisin luoda
+                    kyseisiä fantasiaympäristöjä.
+                </p>
+                <p>
+                    Siispä loin 3D-editorin, joka toimii juuri siten miten
+                    haluaisin 3D-editorin toimivan. Erityisesti pidän
+                    sovelluksen hiotusta navigaatiosta, jonka avulla 3D scenejen
+                    navigointi sujuu ongelmitta. Sovellus mahdollistaa esineiden
+                    asettamisen maailmaan ja niiden helpon manipuloinnin
+                    säädettävän ruudukon avulla. Esineet, skyboksit ja maaston
+                    tekstuurit haetaan tietystä kansiosta nimen perusteella ja
+                    hakuominaisuudella niitä voi tallettaa tietyn
+                    numeronäppäimen alle. Kun esineen malli tai tekstuuri
+                    muuttuu levyllä, heijastuu muutos samantien editorissa,
+                    mahdollistaen mallien muokkaamisen siten että näkee kyseisen
+                    mallin kontekstissa. Moni toiminto kuten kameran
+                    liikuttaminen, zoomaus, mallien siirtely tapahtuu
+                    luontaisella hiiren sivuttaisliikkeellä, ja kameran
+                    keskipisteen voi milloin tahansa keskittää hiiren alla
+                    olevan mallin tai maaston kohdan kohdalle näppäintä
+                    painamalla. Skeneä myös pääsee tunnelmoimaan samantien
+                    ensimmäisen persoonan FPS-kontrollerin avulla.
+                </p>
+                <p>
+                    Sovellus mahdollistaa myös maaston muokkaamisen tavalla,
+                    joka sopii pelin grafiseen tyyliin. Maasto perustuu puolen
+                    metrin väleillä olevaan ruudukkoon, jonka pisteitä voi
+                    näppärästi muokata erilaisin työkaluin. Pisteiden
+                    tekstuureja voi myös määrittää, ja niiden välillä
+                    interpoloidaan antaen halutun vuosituhannen vaihteen
+                    3D-lookin. Tämän lisäksi valaistuksen muokkaus on tehty
+                    helpoksi, tulokset näkevän samantien editorissa. Valaistus
+                    myös toimii aikakautensa verteksipohjaisella logiikalla.
                 </p>
             </>
         ),
@@ -171,7 +327,7 @@ export const projects: Project[] = [
     },
     {
         desc: 'C++-pohjainen cross-platform mediahubi',
-        title: 'MediaManager',
+        title: 'Media Manager',
         icon: '/img/portfolio/icons/mm.jpg',
         screenshots: ['/img/portfolio/mediamanager.png'],
         content: (
@@ -187,84 +343,6 @@ export const projects: Project[] = [
                         target="_blank"
                     >
                         MediaManager GitHubissa
-                    </a>
-                </p>
-            </>
-        ),
-    },
-
-    {
-        desc: 'Työkalu kielten opiskeluun',
-        title: 'Submerge (web)',
-        icon: '/img/portfolio/icons/submergeold.jpg',
-        screenshots: ['/img/portfolio/submergeold.jpg'],
-        content: (
-            <>
-                <div className="tech">
-                    JavaScript, Node.js, Express, MySQL, EJS, REST API,
-                    Bootstrap
-                </div>
-                <p>
-                    Language immersion aka. consuming content that's in a
-                    foreign language for language learning purposes is{' '}
-                    <b>by far</b> the most effective language learning method
-                    according to current research.{' '}
-                </p>
-                <p>
-                    <b>Submerge Immersion Tracker</b> is a tracker of your
-                    immersion: the time you spend immersing, what kind of
-                    immersion you do (reading, listening, active, passive), and
-                    the content you choose to do it with. This app gives you an
-                    intuitive interface to add that data to the current day or
-                    edit previous days. Afterward, you can look at aggregate
-                    data graphs and statistics of that data or get a more
-                    detailed view of it in a spreadsheet-like form. The app also
-                    includes some social features, letting you add friends and
-                    see their recent immersion data.
-                </p>
-                <p>
-                    Projekti ei ole tällä hetkellä hostattuna missään koska
-                    uudempi työpöytäpohjainen offline-versio on tekeillä. Vanhan
-                    etusivun löydät{' '}
-                    <a
-                        href="https://tatularas.github.io/submerge-landing/"
-                        target="_blank"
-                    >
-                        täältä
-                    </a>
-                    .
-                </p>
-                <p>Esittelyvideo:</p>
-                <iframe
-                    className="video-embed"
-                    src="https://www.youtube.com/embed/Ggv0v3yDv28"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                ></iframe>
-            </>
-        ),
-    },
-    {
-        desc: 'Vuosituhannen vaihteen tyyliin toteutettu portfolio',
-        title: 'Edellinen portfolio',
-        icon: '/img/portfolio/icons/portfolio1.png',
-        screenshots: ['/img/portfolio/portfolio1.png'],
-        content: (
-            <>
-                <div className="tech">
-                    React, TypeScript, Sass, Github actions
-                </div>
-                <p>
-                    Tätä edeltävä portfolio. Tämä nykyinen on toteutettu
-                    samoilla teknologioilla.
-                </p>
-                <p>
-                    <a
-                        href="https://tatularas.github.io/portfolio"
-                        target="_blank"
-                    >
-                        Linkki portfolioon
                     </a>
                 </p>
             </>
