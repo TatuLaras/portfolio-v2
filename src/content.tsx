@@ -80,7 +80,7 @@ export const projects: Project[] = [
                 <p>
                     Käyttötarkoitus Muscinissa on siis pääosin se, että voit
                     laittaa mieleistäsi happoteknoa tai muuta musiikkia soimaan
-                    ja antaa vain tajunnan virrata.
+                    ja antaa tajunnan virrata.
                 </p>
             </>
         ),
@@ -357,19 +357,12 @@ export const projects: Project[] = [
             <>
                 <p>
                     Ohjelmointityön tuoksinnassa ei aina muistu päivittää
-                    uusimpia projekteja tänne portfolion puolelle. Myös
-                    projektit jotka ovat melko valmiita mutta eivät 100%
-                    julkaisuvalmiita jäävät myös ulkopuolelle. Kaikki projektini
-                    löydät{' '}
+                    uusimpia projekteja tänne portfolion puolelle. Kaikki
+                    projektini löydät{' '}
                     <a href="https://github.com/TatuLaras/" target="_blank">
                         GitHubistani
                     </a>
                     .
-                </p>
-                <p>
-                    <a href="https://github.com/TatuLaras/musicbase">Täältä</a>{' '}
-                    löytyy esimerkiksi nykyinen työn alla oleva projektini,
-                    Reactilla ja Taurilla (Rust) toteutettu musiikkisovellus.
                 </p>
             </>
         ),
